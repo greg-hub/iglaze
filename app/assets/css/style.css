@@ -1,3 +1,7 @@
+img {
+  width: 100%;
+  max-width: 100%; }
+
 body, div,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
@@ -70,31 +74,6 @@ a:hover {
     display: none; } }
 
 /* ------------------------------------------
-  DEMO STYLES
---------------------------------------------- */
-body {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #37302a;
-  background: #fff;
-  font: normal 100%/1.4 sans-serif; }
-
-section {
-  border-bottom: 1px solid #999;
-  text-align: center;
-  padding: 100px 0 0;
-  height: 800px;
-  width: 100%; }
-
-h1 {
-  margin-bottom: .5em; }
-
-p {
-  width: 90%;
-  margin: 0 auto; }
-
-/* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
 header {
@@ -123,7 +102,8 @@ a.logo {
   margin-top: 10px; }
 
 li.menu-item {
-  text-align: center; }
+  text-align: center;
+  font-size: 1rem; }
 
 /* ------------------------------------------
   MASK
@@ -204,11 +184,10 @@ li.menu-item {
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: #3f81c3; }
+  background: #376ab0; }
 
 @media screen and (min-width: 990px) {
   .nav-collapse a {
-    border-left: 1px solid white;
     padding: 2.2em 2.2em;
     text-align: center;
     border-top: 0;
@@ -258,3 +237,124 @@ li.menu-item {
   font-size: 24px;
   content: "\78";
   /* Close icon */ }
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #37302a;
+  background: #fff;
+  font: normal 100%/1.4 sans-serif; }
+
+section {
+  border-bottom: 1px solid #999;
+  height: 800px;
+  width: 100%; }
+
+/* ------------------------------------------
+  ==Home
+--------------------------------------------- */
+#home {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 700px;
+  background-image: url(../img/doors2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  top: 50px;
+  position: relative; }
+
+#slogan {
+  top: 15em;
+  position: relative;
+  height: 15em;
+  background-repeat: no-repeat; }
+
+.tagline {
+  color: #fff;
+  font-size: 6.5rem;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  text-align: center; }
+
+.tagline2 {
+  color: #376ab0;
+  font-size: 3.5rem;
+  text-shadow: 0px 6px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 0; }
+
+/* ------------------------------------------
+  ==About
+--------------------------------------------- */
+#about {
+  position: relative;
+  background-color: #212020; }
+  #about h1 {
+    color: white; }
+
+@media (min-width: 1025px) {
+  #about {
+    height: 600px;
+    background-color: #212020; }
+    #about #about-text {
+      width: 50%;
+      margin-left: 15em; }
+      #about #about-text h3 {
+        font-size: 2rem;
+        padding-top: 3em;
+        color: #376ab0;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
+      #about #about-text .white {
+        color: #fff;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
+      #about #about-text p {
+        color: white;
+        line-height: 1.5em;
+        padding-top: 2.5em;
+        font-size: 1.3rem; }
+      #about #about-text .fa-arrow-circle-o-down {
+        color: white; } }
+
+/* ------------------------------------------
+  ==shop
+--------------------------------------------- */
+#building {
+  background-image: url(../img/sky.jpg);
+  background-repeat: no-repeat;
+  height: 35em;
+  min-height: 30em;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed; }
+
+/* ------------------------------------------
+  ==Projects
+--------------------------------------------- */
+#Projects {
+  height: 40em; }
+
+#work {
+  background-image: url(../img/effect.jpg);
+  height: 40em;
+  min-height: 40em;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover; }
+  #work h3 {
+    font-size: 4rem;
+    padding-top: 1em;
+    color: #376ab0;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
+    margin-left: 2em; }
+
+/* ------------------------------------------
+  ==clearfix
+--------------------------------------------- */
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }

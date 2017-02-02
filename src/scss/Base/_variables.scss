@@ -1,0 +1,10 @@
+// 
+
+$mobile-small		:320px; //S4 mini, iPhone 5 & up
+$mobile-landscape   :(min-width 480px) (max-width 750px) (orientation landscape);
+$tablet-portrait	:750px;	//portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+$tablet-landscape	:961px;	//tablet, landscape iPad, lo-res laptops ands desktops
+$desktop			:1025px; 	//big landscape tablets, laptops, and desktops
+$hi-res				:1281px;	//hi-res laptops and desktops
+
+$blue   :   #376ab0;

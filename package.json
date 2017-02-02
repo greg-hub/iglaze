@@ -1,14 +1,9 @@
 {
-  "name": "fastshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "author": "Hossein Karami",
-  "url": "https://HosseinKarami.github.io/fastshell",
-  "version": "1.0.5",
+  "name": "iglaze",
+  "author": "Greg Clinton",
+  "version": "1.0.0",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/HosseinKarami/fastshell.git"
-  },
+
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
     "browser-sync": "^2.11.1",

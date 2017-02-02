@@ -78,36 +78,6 @@ a:hover {
 }
 
 
-/* ------------------------------------------
-  DEMO STYLES
---------------------------------------------- */
-
-body {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #37302a;
-  background: #fff;
-  font: normal 100%/1.4 sans-serif;
-}
-
-section {
-  border-bottom: 1px solid #999;
-  text-align: center;
-  padding: 100px 0 0;
-  height: 800px;
-  width: 100%;
-}
-
-h1 {
-  margin-bottom: .5em;
-}
-
-p {
-  width: 90%;
-  margin: 0 auto;
-}
-
 
 /* ------------------------------------------
   FIXED HEADER
@@ -142,6 +112,7 @@ a.logo {
 }
 li.menu-item{
   text-align: center;
+  font-size: 1rem;
 }
 
 
@@ -258,12 +229,12 @@ li.menu-item{
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: #3f81c3;
+  // background: #3f81c3;
+  background: $blue;
 }
 
 @media screen and (min-width: 990px) {
   .nav-collapse a {
-    border-left: 1px solid white;
     padding: 2.2em 2.2em;
     text-align: center;
     border-top: 0;
