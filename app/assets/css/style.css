@@ -1,14 +1,3 @@
-/* =============================================
- *
- *   FIXED RESPONSIVE NAV
- *
- *   (c) 2014 @adtileHQ
- *   http://www.adtile.me
- *   http://twitter.com/adtilehq
- *
- *   Free to use under the MIT License.
- *
- * ============================================= */
 body, div,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
@@ -72,7 +61,7 @@ a:hover {
   -o-user-select: none;
   user-select: none; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 990px) {
   .js .nav-collapse {
     position: relative; }
   .js .nav-collapse.closed {
@@ -117,16 +106,24 @@ header {
   top: 0; }
 
 .logo {
-  background: url(../img/iglaze.png);
+  background: url(../img/logo-mobile.png);
+  background-repeat: no-repeat;
   text-indent: -999px;
-  width: 20em;
+  width: 8em;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   font-weight: bold;
-  line-height: 55px;
+  line-height: 70px;
   padding: 0 20px;
   color: #fff;
   float: left; }
+
+a.logo {
+  margin-left: 2em;
+  margin-top: 10px; }
+
+li.menu-item {
+  text-align: center; }
 
 /* ------------------------------------------
   MASK
@@ -150,10 +147,18 @@ header {
   visibility: visible;
   opacity: 1; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 990px) {
   .mask {
     display: none !important;
-    opacity: 0 !important; } }
+    opacity: 0 !important; }
+  .logo-small {
+    display: none; }
+  .logo {
+    background: url(../img/iglaze-small.png);
+    line-height: 90px; }
+  a.logo {
+    margin-left: 2em;
+    margin-top: 3px; } }
 
 /* ------------------------------------------
   NAVIGATION STYLES
@@ -174,7 +179,7 @@ header {
   width: 100%;
   float: left; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 990px) {
   .nav-collapse {
     float: right;
     width: auto; } }
@@ -183,7 +188,7 @@ header {
   float: left;
   width: 100%; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 990px) {
   .nav-collapse li {
     width: auto; } }
 
@@ -191,7 +196,7 @@ header {
   -webkit-tap-highlight-color: transparent;
   border-top: 1px solid white;
   text-decoration: none;
-  background: #f4421a;
+  background: #000;
   padding: 0.7em 1em;
   color: #fff;
   width: 100%;
@@ -199,12 +204,12 @@ header {
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: #b73214; }
+  background: #3f81c3; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 990px) {
   .nav-collapse a {
     border-left: 1px solid white;
-    padding: 1.02em 2em;
+    padding: 2.2em 2.2em;
     text-align: center;
     border-top: 0;
     float: left;
@@ -214,7 +219,7 @@ header {
   background: #ca3716;
   padding-left: 2em; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 990px) {
   .nav-collapse ul ul a {
     display: none; } }
 
@@ -235,7 +240,7 @@ header {
 .nav-toggle:before {
   color: #fff;
   /* Edit this to change the icon color */
-  font: normal 35px/55px "monospace";
+  font: normal 55px/55px "monospace";
   /* Edit font-size (28px) to change the icon size */
   text-transform: none;
   text-align: center;
@@ -246,14 +251,10 @@ header {
   speak: none;
   width: 100%;
   left: 0;
-  top: 0; }
+  top: 9px;
+  z-index: 3; }
 
 .nav-toggle.active:before {
   font-size: 24px;
   content: "\78";
   /* Close icon */ }
-
-#blog {
-  min-width: 100%;
-  min-height: 40em;
-  background-color: red; }
