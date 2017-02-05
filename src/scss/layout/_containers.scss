@@ -143,15 +143,16 @@ section {
 
 
     #building{
-          background-image: url(../img/sky.jpg);
+          background-image: url(../img/new-test.jpg);
           background-repeat: no-repeat;
-          height: 35em;
-          min-height: 30em;
+    
+          min-height: 35em;
+          min-width: 1440px;
           width: 100%;
+          height: auto; 
           background-size: cover;
           background-attachment: fixed;
-
-    }
+}
 
 
 
@@ -163,7 +164,7 @@ section {
 --------------------------------------------- */
 
     #Projects{
-        height: 40em;
+        height: 20em;
 }
 
     #work {
