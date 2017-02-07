@@ -135,6 +135,7 @@ li.menu-item {
     display: none; }
   .logo {
     background: url(../img/iglaze-small.png);
+    background-repeat: no-repeat;
     line-height: 90px; }
   a.logo {
     margin-left: 2em;
@@ -247,110 +248,191 @@ body {
   font: normal 100%/1.4 sans-serif; }
 
 section {
-  border-bottom: 1px solid #999;
-  height: 800px;
+  height: 600px;
   width: 100%; }
 
 /* ------------------------------------------
   ==Home
 --------------------------------------------- */
 #home {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 700px;
-  background-image: url(../img/doors2.jpg);
+  background-image: url(../img/mobile-doors.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  text-align: center;
-  top: 50px;
-  position: relative; }
+  background-color: #464646; }
+  @media (min-width: 600px) {
+    #home {
+      background-image: url(../img/doors-tablet.jpg); } }
+  @media (min-width: 1025px) {
+    #home {
+      width: 100%;
+      height: 700px;
+      background-image: url(../img/doors2.jpg);
+      top: 50px;
+      position: relative; } }
 
 #slogan {
   top: 15em;
   position: relative;
-  height: 15em;
-  background-repeat: no-repeat; }
+  height: 15em; }
 
 .tagline {
   color: #fff;
-  font-size: 6.5rem;
+  font-size: 2.5rem;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
   text-align: center; }
+  @media (min-width: 1025px) {
+    .tagline {
+      font-size: 4.5rem; } }
 
 .tagline2 {
   color: #376ab0;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   text-shadow: 0px 6px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
   text-align: center;
   margin-top: 0; }
+  @media (min-width: 1025px) {
+    .tagline2 {
+      font-size: 2.5rem; } }
 
 /* ------------------------------------------
   ==About
 --------------------------------------------- */
 #about {
   position: relative;
-  background-color: #212020; }
-  #about h1 {
-    color: white; }
-
-@media (min-width: 1025px) {
-  #about {
-    height: 600px;
-    background-color: #212020; }
-    #about #about-text {
-      width: 50%;
-      margin-left: 15em; }
-      #about #about-text h3 {
+  background-color: #212020;
+  height: 18em; }
+  #about h3 {
+    font-size: 1.4rem;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    color: #376ab0;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
+  #about .white {
+    color: #fff;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
+  #about .about-text {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; }
+  #about p {
+    color: white;
+    line-height: 1.5em;
+    font-size: 0.9rem; }
+  @media (min-width: 600px) {
+    #about .about-text {
+      text-align: left;
+      width: 60%; }
+    #about p {
+      font-size: 1rem; } }
+  @media (min-width: 1025px) {
+    #about {
+      height: 500px; }
+      #about h3 {
         font-size: 2rem;
-        padding-top: 3em;
-        color: #376ab0;
-        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
-      #about #about-text .white {
-        color: #fff;
-        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
-      #about #about-text p {
-        color: white;
-        line-height: 1.5em;
-        padding-top: 2.5em;
+        padding-top: 1em; }
+      #about p {
+        line-height: 1.3em;
+        padding-top: 0.5em;
         font-size: 1.3rem; }
-      #about #about-text .fa-arrow-circle-o-down {
-        color: white; } }
+      #about .about-text {
+        width: 45%;
+        margin-left: 15em; } }
 
 /* ------------------------------------------
-  ==shop
+  ==building background image
 --------------------------------------------- */
 #building {
-  background-image: url(../img/new-test.jpg);
-  background-repeat: no-repeat;
-  min-height: 35em;
-  min-width: 1440px;
-  width: 100%;
-  height: auto;
+  background-image: url(../img/windows.jpg);
   background-size: cover;
-  background-attachment: fixed; }
+  background-repeat: no-repeat;
+  min-height: 100%;
+  height: 35em;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: 50% 50%; }
 
 /* ------------------------------------------
   ==Projects
 --------------------------------------------- */
 #Projects {
-  height: 20em; }
-
-#work {
-  background-image: url(../img/effect.jpg);
   height: 40em;
-  min-height: 40em;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover; }
-  #work h3 {
-    font-size: 4rem;
+  padding: 0;
+  margin: 0; }
+  #Projects #work {
+    background-image: url(../img/effect.jpg);
+    height: 30em;
+    min-height: 40em;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover; }
+  #Projects h3 {
+    font-size: 2rem;
     padding-top: 1em;
     color: #376ab0;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
     margin-left: 2em; }
+
+/* ------------------------------------------
+  ==order
+--------------------------------------------- */
+#order {
+  height: 40em; }
+  #order h1 {
+    color: #000; }
+
+/* ------------------------------------------
+  ==contact
+--------------------------------------------- */
+#Contact {
+  height: 40em;
+  background-color: #212020; }
+  #Contact h1 {
+    color: #376ab0;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0px 6px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    padding-top: 0.5em; }
+  @media (min-width: 1025px) {
+    #Contact h1 {
+      text-align: left;
+      font-size: 3rem;
+      margin-left: 3em; } }
+
+.address {
+  width: 90%;
+  text-align: center; }
+  .address h5 {
+    color: #376ab0;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    padding-top: 0.5em;
+    margin-left: 3em; }
+  .address p {
+    padding-top: 0.5em;
+    margin-left: 3em;
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.3rem; }
+  .address span {
+    color: #376ab0;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif; }
+  @media (min-width: 600px) {
+    .address {
+      text-align: left; } }
+  @media (min-width: 1025px) {
+    .address {
+      width: 50%;
+      float: right; } }
+
+.contact-form {
+  width: 50%; }
 
 /* ------------------------------------------
   ==clearfix
