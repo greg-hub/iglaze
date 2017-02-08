@@ -6,56 +6,37 @@
  * @version 1.0.0
  * Copyright 2017. MIT licensed.
  */
-$(document).ready(function() {
-    $("#submit_btn").click(function() { 
-       
-        var proceed = true;
-        //simple validation at client's end
-        //loop through each field and we simply change border color to red for invalid fields       
-        $("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
-            $(this).css('border-color',''); 
-            if(!$.trim($(this).val())){ //if this field is empty 
-                $(this).css('border-color','red'); //change border color to red   
-                proceed = false; //set do not proceed flag
-            }
-            //check invalid email
-            var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
-            if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
-                $(this).css('border-color','red'); //change border color to red   
-                proceed = false; //set do not proceed flag              
-            }   
+(function($) {
+    // Select the form and form message
+    var form = $('#ajax-contact-form'),
+        form_messages = $('#form-messages');
+        
+    // Action at on submit event
+    $(form).on('submit', function(e) {
+        e.preventDefault(); // Stop browser loading
+        
+        // Get form data
+        var form_data = $(form).serialize();
+        
+        // Send Ajax Request
+        var the_request = $.ajax({
+            type: 'POST', // Request Type POST, GET, etc.
+            url: "contact.php",
+            data: form_data
         });
-       
-        if(proceed) //everything looks good! proceed...
-        {
-            //get input field values data to be sent to server
-            post_data = {
-                'user_name'     : $('input[name=name]').val(), 
-                'user_email'    : $('input[name=email]').val(), 
-                'country_code'  : $('input[name=phone1]').val(), 
-                'phone_number'  : $('input[name=phone2]').val(), 
-                'subject'       : $('select[name=subject]').val(), 
-                'msg'           : $('textarea[name=message]').val()
-            };
+        
+        // At success
+        the_request.done(function(data){
+            form_messages.text("Success: "+data);
             
-            //Ajax post data to server
-            $.post('contact_me.php', post_data, function(response){  
-                if(response.type == 'error'){ //load json data from server and output message     
-                    output = '<div class="error">'+response.text+'</div>';
-                }else{
-                    output = '<div class="success">'+response.text+'</div>';
-                    //reset values in all input fields
-                    $("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
-                    $("#contact_form #contact_body").slideUp(); //hide form after success
-                }
-                $("#contact_form #contact_results").hide().html(output).slideDown();
-            }, 'json');
-        }
+            // Do other things at success
+        });
+        
+        // At error
+        the_request.done(function(){
+            form_messages.text("Error: "+data);
+            
+            // Do other things at fails
+        });
     });
-    
-    //reset previously set border colors and hide all message on .keyup()
-    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
-        $(this).css('border-color',''); 
-        $("#contact_results").slideUp();
-    });
-});
+})(jQuery);
