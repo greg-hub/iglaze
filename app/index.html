@@ -91,28 +91,34 @@
       </div>
 
       <div class="contact-form">
-          	<div align="left" style="width: 500px; margin: 0 auto;">
-		
-        <h2 style="margin: 20px 0 20px 150px;">Contact Us</h2>
-		
-        	<div id="note"></div>
-
-			<div id="fields">
-				<form id="ajax-contact-form" action="">
-				<label>Name</label><input type="text" name="name" value="" /><br />
-
-				<label>E-Mail</label><input type="text" name="email" value="" /><br />
-
-				<label>Subject</label><input type="text" name="subject" value="" /><br />
-
-				<label>Comments</label><textarea name="message" rows="5" cols="25"></textarea><br />
-
-				<label>&nbsp;</label><input class="btn" type="submit" name="submit" value="Send Message" />
-				</form>
-			</div>
-
-	</div>
-            
+         <div class="form-style" id="contact_form">
+    <div class="form-style-heading">Please Contact Us</div>
+    <div id="contact_results"></div>
+    <div id="contact_body">
+        <label><span>Name <span class="required">*</span></span>
+            <input type="text" name="name" id="name" required="true" class="input-field"/>
+        </label>
+        <label><span>Email <span class="required">*</span></span>
+            <input type="email" name="email" required="true" class="input-field"/>
+        </label>
+        <label><span>Phone</span>
+            <input type="text" name="phone1" maxlength="4" placeholder="+91"  required="true" class="tel-number-field"/>&mdash;<input type="text" name="phone2" maxlength="15"  required="true" class="tel-number-field long" />
+        </label>
+            <label for="subject"><span>Regarding</span>
+            <select name="subject" class="select-field">
+            <option value="General Question">General Question</option>
+            <option value="Advertise">Advertisement</option>
+            <option value="Partnership">Partnership Oppertunity</option>
+            </select>
+        </label>
+        <label for="field5"><span>Message <span class="required">*</span></span>
+            <textarea name="message" id="message" class="textarea-field" required="true"></textarea>
+        </label>
+        <label>
+            <span>&nbsp;</span><input type="submit" id="submit_btn" value="Submit" />
+        </label>
+    </div>
+</div>
 
      </div>
       
