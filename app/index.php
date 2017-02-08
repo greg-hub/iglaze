@@ -1,3 +1,12 @@
+<?php
+require_once './vendor/autoload.php';
+$helperLoader = new SplClassLoader('Helpers', './vendor');
+$helperLoader->register();
+use Helpers\Config;
+$config = new Config;
+$config->load('./config/config.php');
+?><!DOCTYPE html> 
+ <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>iglaze</title>
@@ -89,27 +98,39 @@
       </div>
 
       <div class="contact-form">
-          <div id="form-messages"></div>
-          <form id="ajax-contact" method="post" action="mailer.php">
-    <div class="field">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+             <div class="col-md-6 col-md-offset-3">
+        <form enctype="application/x-www-form-urlencoded;" id="contact-form" class="form-horizontal" role="form" method="post">
+            <div class="form-group" id="name-field">
+                <label for="form-name" class="col-lg-2 control-label"><?php echo $config->get('fields.name'); ?></label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="form-name" name="form-name" placeholder="<?php echo $config->get('fields.name'); ?>" required>
+                </div>
+            </div>
+            <div class="form-group" id="email-field">
+                <label for="form-email" class="col-lg-2 control-label"><?php echo $config->get('fields.email'); ?></label>
+                <div class="col-lg-10">
+                    <input type="email" class="form-control" id="form-email" name="form-email" placeholder="<?php echo $config->get('fields.email'); ?>" required>
+                </div>
+            </div>
+            <div class="form-group" id="subject-field">
+                <label for="form-subject" class="col-lg-2 control-label"><?php echo $config->get('fields.subject'); ?></label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="form-subject" name="form-subject" placeholder="<?php echo $config->get('fields.subject'); ?>" required>
+                </div>
+            </div>
+            <div class="form-group" id="message-field">
+                <label for="form-message" class="col-lg-2 control-label"><?php echo $config->get('fields.message'); ?></label>
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="6" id="form-message" name="form-message" placeholder="<?php echo $config->get('fields.message'); ?>" required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" class="btn btn-default"><?php echo $config->get('fields.btn-send'); ?></button>
+                </div>
+            </div>
+        </form>
     </div>
-
-    <div class="field">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="field">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-    </div>
-
-    <div class="field">
-        <button type="submit">Send</button>
-    </div>
-</form>
 
      </div>
       
@@ -124,6 +145,11 @@
     <script src="assets/components/modernizr/modernizr.js"></script>
     <script src="assets/components/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
+    <script type="text/javascript">
+        new ContactForm('#contact-form', {
+            endpoint: './process.php'
+        });
+    </script>
 
     <!-- Google Analytics -->
 
