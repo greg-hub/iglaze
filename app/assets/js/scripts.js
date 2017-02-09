@@ -6,37 +6,35 @@
  * @version 1.0.0
  * Copyright 2017. MIT licensed.
  */
-(function($) {
-    // Select the form and form message
-    var form = $('#ajax-contact-form'),
-        form_messages = $('#form-messages');
-        
-    // Action at on submit event
-    $(form).on('submit', function(e) {
-        e.preventDefault(); // Stop browser loading
-        
-        // Get form data
-        var form_data = $(form).serialize();
-        
-        // Send Ajax Request
-        var the_request = $.ajax({
-            type: 'POST', // Request Type POST, GET, etc.
-            url: "contact.php",
-            data: form_data
-        });
-        
-        // At success
-        the_request.done(function(data){
-            form_messages.text("Success: "+data);
-            
-            // Do other things at success
-        });
-        
-        // At error
-        the_request.done(function(){
-            form_messages.text("Error: "+data);
-            
-            // Do other things at fails
-        });
-    });
-})(jQuery);
+$(document).ready(function() {
+		$('form#contact-us').submit(function() {
+			$('form#contact-us .error').remove();
+			var hasError = false;
+			$('.requiredField').each(function() {
+				if($.trim($(this).val()) == '') {
+					var labelText = $(this).prev('label').text();
+					$(this).parent().append('<span class="error">Your forgot to enter your '+labelText+'.</span>');
+					$(this).addClass('inputError');
+					hasError = true;
+				} else if($(this).hasClass('email')) {
+					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+					if(!emailReg.test($.trim($(this).val()))) {
+						var labelText = $(this).prev('label').text();
+						$(this).parent().append('<span class="error">Sorry! You\'ve entered an invalid '+labelText+'.</span>');
+						$(this).addClass('inputError');
+						hasError = true;
+					}
+				}
+			});
+			if(!hasError) {
+				var formInput = $(this).serialize();
+				$.post($(this).attr('action'),formInput, function(data){
+					$('form#contact-us').slideUp("fast", function() {				   
+						$(this).before('<p class="tick"><strong>Thanks!</strong> Your email has been delivered.</p>');
+					});
+				});
+			}
+			
+			return false;	
+		});
+	});
