@@ -104,6 +104,10 @@ header {
   padding: 0 20px;
   color: #fff;
   float: left;
+  @include breakpoint($desktop) {
+    position: absolute;
+    top: 5px;
+  }
 }
 
 a.logo {
@@ -162,6 +166,7 @@ li.menu-item{
       background: url(../img/iglaze-small.png);
       background-repeat: no-repeat;
       line-height: 90px;
+      width: 13%;
   }
 
   a.logo {
@@ -209,6 +214,9 @@ li.menu-item{
 .nav-collapse li {
   float: left;
   width: 100%;
+  font-family: $primary-font;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
 }
 
 @media screen and (min-width: 990px) {
@@ -230,8 +238,9 @@ li.menu-item{
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  // background: #3f81c3;
-  background: $blue;
+  background: $nav-bg;
+
+
 }
 
 @media screen and (min-width: 990px) {
@@ -293,7 +302,3 @@ li.menu-item{
   font-size: 24px;
   content: "\78"; /* Close icon */
 }
-
-
-
-

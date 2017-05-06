@@ -1,17 +1,17 @@
-<!--<?php 
+<!--<?php
 error_reporting(E_ALL ^ E_NOTICE); // hide all basic notices from PHP
 
 //If the form is submitted
 if(isset($_POST['submitted'])) {
-	
+
 	// require a name from user
 	if(trim($_POST['contactName']) === '') {
-		$nameError =  'Forgot your name!'; 
+		$nameError =  'Forgot your name!';
 		$hasError = true;
 	} else {
 		$name = trim($_POST['contactName']);
 	}
-	
+
 	// need valid email
 	if(trim($_POST['email']) === '')  {
 		$emailError = 'Forgot to enter in your e-mail address.';
@@ -22,7 +22,7 @@ if(isset($_POST['submitted'])) {
 	} else {
 		$email = trim($_POST['email']);
 	}
-		
+
 	// we need at least some content
 	if(trim($_POST['comments']) === '') {
 		$commentError = 'You forgot to enter a message!';
@@ -34,10 +34,10 @@ if(isset($_POST['submitted'])) {
 			$comments = trim($_POST['comments']);
 		}
 	}
-		
+
 	// upon no failure errors let's email now!
 	if(!isset($hasError)) {
-		
+
 		$emailTo = 'gregclinton1@gmail.com';
 		$subject = 'Submitted message from '.$name;
 		$sendCopy = trim($_POST['sendCopy']);
@@ -45,13 +45,13 @@ if(isset($_POST['submitted'])) {
 		$headers = 'From: '.$emailTo.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
 		mail($emailTo, $subject, $body, $headers);
-        
+
         // set our boolean completion value to TRUE
 		$emailSent = true;
 	}
 }
 ?>-->
-<!DOCTYPE html> 
+<!DOCTYPE html>
  <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -75,23 +75,23 @@ if(isset($_POST['submitted'])) {
         <ul>
           <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
           <li class="menu-item"><a href="#about" data-scroll>About</a></li>
-          <li class="menu-item"><a href="#Projects" data-scroll>Projects</a></li>
-          <li class="menu-item"><a href="#Order" data-scroll>Order</a></li>
-          <li class="menu-item"><a href="#Aluminum" data-scroll>Aluminum</a></li>
+          <!-- <li class="menu-item"><a href="#Projects" data-scroll>Projects</a></li> -->
+          <!-- <li class="menu-item"><a href="#Order" data-scroll>Order</a></li> -->
+          <!-- <li class="menu-item"><a href="#Aluminum" data-scroll>Aluminum</a></li> -->
           <li class="menu-item"><a href="#ContactUs" data-scroll>Contact</a></li>
         </ul>
       </nav>
     </header>
 
 <!--Home-->
-    
+
     <section id="home">
-             
+
        <div id="slogan">
           <h1 class="tagline">Aluminum</h1>
           <h2 class="tagline2">Manufactured Frames</h2>
        </div>
-    
+
     </section>
 
 <!--about-->
@@ -105,60 +105,60 @@ if(isset($_POST['submitted'])) {
 
 
     <!--building scroll-->
-           <section id="building">
+            <section id="building">
              </section>
 
 
-    <section id="Projects">
+    <!-- <section id="Projects">
       <div id="work">
         <h3>Projects</h3>
       </div>
-    </section>
+    </section> -->
 
 <!--Order-->
 
-    <section id="Order">
+    <!-- <section id="Order">
       <h1>Order</h1>
-    </section>
+    </section> -->
 
 <!--Aluminum-->
 
-        <section id="Aluminum">
+        <!-- <section id="Aluminum">
       <h1>Aluminum</h1>
-    </section>
+    </section> -->
 
 
 <!--Contacts-->
 
         <section id="ContactUs">
-   
+
       <h1>Contact</h1>
-   
+
 
          <!-- @begin contact -->
 	<div id="contact">
 		<div class="container content">
-		
+
 	        <?php if(isset($emailSent) && $emailSent == true) { ?>
                 <p class="info">Your email was sent. <br> We will get back to your soon.</p>
             <?php } else { ?>
-            
 
-				
+
+
 				<div id="contact-form">
 					<?php if(isset($hasError) || isset($captchaError) ) { ?>
                         <p class="alert">Error submitting the form</p>
                     <?php } ?>
-				
+
 					<form id="contact-us" action="index.php" method="post">
 						<div class="formblock">
 							<label class="screen-reader-text">Name</label>
 							<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="txt requiredField" placeholder="Name:" />
 							<?php if($nameError != '') { ?>
-								<br /><span class="error"><?php echo $nameError;?></span> 
+								<br /><span class="error"><?php echo $nameError;?></span>
 							<?php } ?>
 						</div>
-                        
+
 						<div class="formblock">
 							<label class="screen-reader-text">Email</label>
 							<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="txt requiredField email" placeholder="Email:" />
@@ -166,20 +166,20 @@ if(isset($_POST['submitted'])) {
 								<br /><span class="error"><?php echo $emailError;?></span>
 							<?php } ?>
 						</div>
-                        
+
 						<div class="formblock">
 							<label class="screen-reader-text">Message</label>
 							 <textarea name="comments" id="commentsText" class="txtarea requiredField" placeholder="Message:"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
 							<?php if($commentError != '') { ?>
-								<br /><span class="error"><?php echo $commentError;?></span> 
+								<br /><span class="error"><?php echo $commentError;?></span>
 							<?php } ?>
 						</div>
-                        
+
 							<button name="submit" type="submit" class="subbutton">Send us Mail!</button>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
-					</form>			
+					</form>
 				</div>
-				
+
 			<?php } ?>
 		</div>
     </div><!-- End #contact -->
@@ -193,7 +193,7 @@ if(isset($_POST['submitted'])) {
         <p><span>Mob:</span> 07983 048078</p>
         <p><span>Email:</span> sales@iglaze.com</p>
       </div>
-      
+
     </section>
 
 
