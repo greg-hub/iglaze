@@ -5,20 +5,14 @@ body {
   color: #37302a;
   background: #fff;
   font: normal 100%/1.4 sans-serif;
-
 }
 
 
 section {
-//   border-bottom: 1px solid #999;
-//   text-align: center;
-//   padding: 100px 0 0;
-     height: 600px;
-     width: 100%;
-     position: relative;
-     box-sizing: border-box;
-
-
+  height: 600px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
 }
 
 
@@ -26,69 +20,60 @@ section {
   ==Home
 --------------------------------------------- */
 
-
 section#home {
-   //mobile
-    background-image: url(../img/mobile-doors.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-    @include breakpoint ($tablet-portrait){
-      background-image: url(../img/doors-tablet.jpg);
-    } // tablet
+  //mobile
+  background-image: url(../img/mobile-doors.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  @include breakpoint ($tablet-portrait){
+    background-image: url(../img/doors-tablet.jpg);
+  } // tablet
 
-    @include breakpoint ($desktop){
-      width: 100%;
-      height: 100vh;
-      background-image: url(../img/doors2.jpg);
-      top: 70px;
-      position: relative;
-
-
-      } //desktop
+  @include breakpoint ($desktop){
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/doors2.jpg);
+    top: 70px;
+    position: relative;
+  } //desktop
 } //home
-
 
 #slogan {
   //mobile
-    top: 15em;
-    position: relative;
-    height: 15em;
+  top: 15em;
+  position: relative;
+  height: 15em;
 }
 
 .tagline {
-    color: #fff;
-    font-size: 2.5rem;
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-    0px 8px 1px rgba(0,0,0,0.1),
-    0px 1px 0px rgba(0,0,0,0.1);
-    font-family: $primary-font;
-    text-align: center;
-    @include breakpoint ($desktop){
-            font-size: 4.5rem;
-        }
-
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 1px rgba(0,0,0,0.1),
+  0px 1px 0px rgba(0,0,0,0.1);
+  font-family: $primary-font;
+  text-align: center;
+  @include breakpoint ($desktop){
+    font-size: 4.5rem;
+  }
 }
 
 .tagline2{
-    color: #376ab0;
-    font-size: 1.5rem;
-     //text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-    text-shadow: 0px 6px 3px rgba(0,0,0,0.4),
-    0px 8px 1px rgba(0,0,0,0.1),
-    0px 6px 0px rgba(0,0,0,0.1);
-    font-family: $primary-font;
-    text-align: center;
-    margin-top: 0;
-
-    @include breakpoint ($desktop){
-            font-size: 2.5rem;
-        }
-
+  color: #376ab0;
+  font-size: 1.5rem;
+  text-shadow: 0px 6px 3px rgba(0,0,0,0.4),
+  0px 8px 1px rgba(0,0,0,0.1),
+  0px 6px 0px rgba(0,0,0,0.1);
+  font-family: $primary-font;
+  text-align: center;
+  margin-top: 0;
+  @include breakpoint ($desktop){
+    font-size: 2.5rem;
+  }
 }
-
 
 /* ------------------------------------------
   ==About
@@ -104,68 +89,58 @@ section#home {
       border-width: 10px;
     }
 
-
-
-
   h3 {
     font-size: 1.4rem;
     padding-top: 1em;
     padding-bottom: 0.5em;
     color: $blue;
-    text-shadow:  0px 2px 3px rgba(0,0,0,0.4),
-                      0px 4px 1px rgba(0,0,0,0.1),
-                      0px 1px 0px rgba(0,0,0,0.1);
-        }
-
-    .white{
-        color: #fff;
-        text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
                  0px 4px 1px rgba(0,0,0,0.1),
                  0px 1px 0px rgba(0,0,0,0.1);
-        }
-    .about-text {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
+    }
 
-}
+    .white{
+      color: #fff;
+      text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+                   0px 4px 1px rgba(0,0,0,0.1),
+                   0px 1px 0px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
 
     p {
-        color: white;
-        line-height: 1.5em;
-        font-size: 0.9rem;
-
-        }
-        @include breakpoint ($tablet-portrait){
-            .about-text {
-                      text-align: left;
-                      width: 60%;
-                  }
-            p {
-                      font-size: 1rem;
-                  }
-              } //tablet
-
-            @include breakpoint ($desktop){
-                 height: 500px;
-
-                         h3 {
-                            font-size: 2rem;
-                            padding-top: 1em;
-                            }
-
-                        p {
-                            line-height: 1.3em;
-                            padding-top: 0.5em;
-                            font-size: 1.3rem;
+      color: white;
+      line-height: 1.5em;
+      font-size: 0.9rem;
+    }
+    @include breakpoint ($tablet-portrait){
+      .about-text {
+        text-align: left;
+        width: 60%;
+      }
+      p {
+        font-size: 1rem;
+      }
+    } //tablet
+    @include breakpoint ($desktop){
+      height: 500px;
+      h3 {
+        font-size: 2rem;
+        padding-top: 1em;
+      }
+      p {
+        line-height: 1.3em;
+        padding-top: 0.5em;
+        font-size: 1.3rem;
                         }
-
-                       .about-text {
-                            width: 45%;
-                            margin-left: 15em;
-                        }
-
-            } //desktop
+      .about-text {
+        width: 45%;
+        margin-left: 15em;
+      }
+    } //desktop
 } // about
 
 
@@ -174,144 +149,102 @@ section#home {
 --------------------------------------------- */
 
 #building{
-
-    background-image: url(../img/windows.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100%;
-    height: 35em;
-    //min-width: 1400px;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-          @include breakpoint ($tablet-portrait){} //tablet
-          @include breakpoint ($desktop){} //desktop
-
+  background-image: url(../img/windows.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  height: 35em;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  @include breakpoint ($tablet-portrait){} //tablet
+  @include breakpoint ($desktop){} //desktop
 }
-
-
-
-
-
 
 /* ------------------------------------------
   ==Projects
 --------------------------------------------- */
 
-    #Projects{
-        height: 40em;
-        padding: 0;
-        margin: 0;
+#Projects{
+  height: 40em;
+  padding: 0;
+  margin: 0;
 
-    #work {
-        background-image: url(../img/effect.jpg);
-         height: 30em;
-        min-height: 40em;
-        background-repeat: no-repeat;
-        width: 100%;
-        background-size: cover;
-    }
-
-        h3 {
-            font-size: 2rem;
-            padding-top: 1em;
-            color: $blue;
-            text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
-            0px 4px 1px rgba(0,0,0,0.1),
-            0px 1px 0px rgba(0,0,0,0.1);
-            margin-left: 2em;
-        }
-
+  #work {
+    background-image: url(../img/effect.jpg);
+    height: 30em;
+    min-height: 40em;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+  }
+  h3 {
+    font-size: 2rem;
+    padding-top: 1em;
+    color: $blue;
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+    0px 4px 1px rgba(0,0,0,0.1),
+    0px 1px 0px rgba(0,0,0,0.1);
+    margin-left: 2em;
+  }
 }
-
-
-
 
 /* ------------------------------------------
   ==order
 --------------------------------------------- */
 
 #order {
-    height: 40em;
-
-    h1 {
-        color: #000;
-    }
+  height: 40em;
+  h1 {
+    color: #000;
+  }
 }
-
-
-
 
 /* ------------------------------------------
   ==contact
 --------------------------------------------- */
 
-
-
-
-
- .address{
-        width: 90%;
-        text-align: center;
-
-        h5 {
-            color: #376ab0;
-            font-size: 1.3rem;
-            text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
-            0px 8px 1px rgba(0,0,0,0.1),
-            0px 6px 0px rgba(0,0,0,0.1);
-            font-family: sans-serif;
-            padding-top: 2em;
-            margin-left: 3em;
-        }
-
-        p {
-           padding-top: 0.5em;
-           margin-left: 3em;
-           color: white;
-           line-height: 1.5em;
-           font-size: 1.3rem;
-     }
-        span {
-            color: #376ab0;
-            text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
-            0px 8px 1px rgba(0,0,0,0.1),
-            0px 6px 0px rgba(0,0,0,0.1);
-            font-family: sans-serif;
-   }
-                @include breakpoint($tablet-portrait){
-                    text-align: left;
-            } //tablet
-
-                     @include breakpoint($desktop){
-                            width: 50%;
-                            float: right;
-
-} //desktop
-
-
-
-       } //address
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.address{
+  width: 90%;
+  text-align: center;
+  h5 {
+    color: #376ab0;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
+    0px 8px 1px rgba(0,0,0,0.1),
+    0px 6px 0px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    padding-top: 2em;
+    margin-left: 3em;
+  }
+  p {
+    padding-top: 0.5em;
+    margin-left: 3em;
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.3rem;
+  }
+  span {
+    color: #376ab0;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
+    0px 8px 1px rgba(0,0,0,0.1),
+    0px 6px 0px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+  }
+  @include breakpoint($tablet-portrait) {
+    text-align: left;
+  } //tablet
+  @include breakpoint($desktop) {
+    width: 50%;
+    float: right;
+  } //desktop
+} //address
 
 /* ------------------------------------------
   ==clearfix
 --------------------------------------------- */
 .clearfix:after {
-    content:" ";
-    display:table;
-    clear:both;
+  content:" ";
+  display:table;
+  clear:both;
 }
