@@ -77,7 +77,34 @@ a:hover {
   }
 }
 
+/* ------------------------------------------
+  top--Header
+--------------------------------------------- */
 
+.top--Header {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #000;
+  top: 0;
+  border-bottom: 1px solid rgba(160, 160, 159, 0.3);
+
+  h4 {
+    background-color: #000;
+    display: inline-block;
+    width: 10%;
+    padding: 6px;
+
+    font-size: 0.8rem;
+    color: #fff;
+    font-family: walkway_boldregular;
+  }
+  @include breakpoint ($desktop){
+
+  } //desktop
+}
 
 /* ------------------------------------------
   FIXED HEADER
@@ -89,7 +116,8 @@ header {
   z-index: 3;
   width: 100%;
   left: 0;
-  top: 0;
+  top: 30px;
+  border-bottom: 1px solid rgba(160, 160, 159, 0.3);
  }
 
 .logo {
@@ -238,8 +266,7 @@ li.menu-item{
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: $nav-bg;
-
+    border-bottom: solid 2px $nav-bg;
 
 }
 

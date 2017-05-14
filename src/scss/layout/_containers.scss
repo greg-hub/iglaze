@@ -2,7 +2,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  color: #37302a;
+  color: #333;
   background: #fff;
   font: normal 100%/1.4 sans-serif;
 }
@@ -22,28 +22,40 @@ section {
 
 section#home {
   //mobile
-  background-image: url(../img/mobile-doors.jpg);
+  background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)
+                    ),
+  url(../img/mobile-doors.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  //background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
   @include breakpoint ($tablet-portrait){
-    background-image: url(../img/doors-tablet.jpg);
+    background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.1),
+                      rgba(0, 0, 0, 0.1)
+                      ),
+    url(../img/doors-tablet.jpg);
   } // tablet
 
   @include breakpoint ($desktop){
     width: 100%;
-    height: 100vh;
-    background-image: url(../img/doors2.jpg);
-    top: 70px;
+    height: 92vh;
+    background-image: linear-gradient(
+                      rgba(0, 0, 0, 0.2),
+                      rgba(0, 0, 0, 0.2)
+                      ),
+    url(../img/effect-windows.jpg);
+    background-size: 100%;
     position: relative;
+    background-position: center 100px;
   } //desktop
 } //home
 
 #slogan {
   //mobile
-  top: 15em;
+  top: 20em;
   position: relative;
   height: 15em;
 }
@@ -57,12 +69,12 @@ section#home {
   font-family: $primary-font;
   text-align: center;
   @include breakpoint ($desktop){
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
 .tagline2{
-  color: #376ab0;
+  color: #fff;
   font-size: 1.5rem;
   text-shadow: 0px 6px 3px rgba(0,0,0,0.4),
   0px 8px 1px rgba(0,0,0,0.1),
@@ -71,7 +83,7 @@ section#home {
   text-align: center;
   margin-top: 0;
   @include breakpoint ($desktop){
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -81,30 +93,40 @@ section#home {
 
 #about {
     position: relative;
-    background-color: #212020;
+    background-color: #333  ;
     height: 100vh;
+
     @include breakpoint ($desktop){
-      border-style: inset;
-      border-color: #d0d5db;
-      border-width: 10px;
-    }
+  }
+
 
   h3 {
     font-size: 1.4rem;
     padding-top: 1em;
     padding-bottom: 0.5em;
-    color: $blue;
+    color: #fff;
     text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
                  0px 4px 1px rgba(0,0,0,0.1),
                  0px 1px 0px rgba(0,0,0,0.1);
     }
+//     h3:before {
+//   content : "";
+//   position: absolute;
+//   left    : 0;
+//   bottom  : 0;
+//   height  : 1px;
+//   width   : 60%;  /* or 100px */
+//   border-bottom: 1px solid magenta;
+// }
 
-    .white{
-      color: #fff;
+    .blue{
+      color: $blue;
       text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
                    0px 4px 1px rgba(0,0,0,0.1),
                    0px 1px 0px rgba(0,0,0,0.1);
     }
+
+
     .about-text {
       width: 90%;
       margin: 0 auto;
@@ -112,9 +134,10 @@ section#home {
     }
 
     p {
-      color: white;
+      color: #eee;
       line-height: 1.5em;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      font-family: 'Roboto', sans-serif;
     }
     @include breakpoint ($tablet-portrait){
       .about-text {
@@ -128,13 +151,14 @@ section#home {
     @include breakpoint ($desktop){
       height: 500px;
       h3 {
+        font-family: walkway_boldregular, sans-serif;
         font-size: 2rem;
-        padding-top: 1em;
+        padding-top: 2.3em;
       }
       p {
         line-height: 1.3em;
-        padding-top: 0.5em;
-        font-size: 1.3rem;
+        padding-top: 0.8em;
+        font-size: 1.2rem;
                         }
       .about-text {
         width: 45%;
@@ -149,16 +173,18 @@ section#home {
 --------------------------------------------- */
 
 #building{
-  background-image: url(../img/windows.jpg);
-  background-size: cover;
+  background-image: url(../img/new-build-double-glazing.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
-  min-height: 100%;
-  height: 35em;
+  background-color: #333;
+  height: 80vh;
   width: 100%;
   background-attachment: fixed;
-  background-position: 50% 50%;
-  @include breakpoint ($tablet-portrait){} //tablet
-  @include breakpoint ($desktop){} //desktop
+  //@include breakpoint ($tablet-portrait){} //tablet
+  @include breakpoint ($desktop){
+      background-position: center 100px;
+
+  } //desktop
 }
 
 /* ------------------------------------------
@@ -203,19 +229,19 @@ section#home {
 /* ------------------------------------------
   ==contact
 --------------------------------------------- */
-
 .address{
   width: 90%;
   text-align: center;
   h5 {
     color: #376ab0;
-    font-size: 1.3rem;
+    font-size: 2rem;
+    font-family: walkway_boldregular, sans-serif;
     text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
-    0px 8px 1px rgba(0,0,0,0.1),
-    0px 6px 0px rgba(0,0,0,0.1);
-    font-family: sans-serif;
+    0px 4px 1px rgba(0,0,0,0.1),
+    0px 3px 0px rgba(0,0,0,0.1);
     padding-top: 2em;
     margin-left: 3em;
+
   }
   p {
     padding-top: 0.5em;
@@ -223,12 +249,13 @@ section#home {
     color: white;
     line-height: 1.5em;
     font-size: 1.3rem;
+    font-family: Roboto, sans-serif;
   }
   span {
     color: #376ab0;
     text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
-    0px 8px 1px rgba(0,0,0,0.1),
-    0px 6px 0px rgba(0,0,0,0.1);
+    0px 4px 1px rgba(0,0,0,0.1),
+    0px 3px 0px rgba(0,0,0,0.1);
     font-family: sans-serif;
   }
   @include breakpoint($tablet-portrait) {

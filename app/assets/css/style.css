@@ -81,6 +81,27 @@ a:hover {
     display: none; } }
 
 /* ------------------------------------------
+  top--Header
+--------------------------------------------- */
+.top--Header {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #000;
+  top: 0;
+  border-bottom: 1px solid rgba(160, 160, 159, 0.3); }
+  .top--Header h4 {
+    background-color: #000;
+    display: inline-block;
+    width: 10%;
+    padding: 6px;
+    font-size: 0.8rem;
+    color: #fff;
+    font-family: walkway_boldregular; }
+
+/* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
 header {
@@ -89,7 +110,8 @@ header {
   z-index: 3;
   width: 100%;
   left: 0;
-  top: 0; }
+  top: 30px;
+  border-bottom: 1px solid rgba(160, 160, 159, 0.3); }
 
 .logo {
   background: url(../img/logo-mobile.png);
@@ -200,7 +222,7 @@ li.menu-item {
 
 .nav-collapse a:active,
 .nav-collapse .active a {
-  background: #376ab0; }
+  border-bottom: solid 2px #376ab0; }
 
 @media screen and (min-width: 990px) {
   .nav-collapse a {
@@ -258,7 +280,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  color: #37302a;
+  color: #333;
   background: #fff;
   font: normal 100%/1.4 sans-serif; }
 
@@ -272,25 +294,24 @@ section {
   ==Home
 --------------------------------------------- */
 section#home {
-  background-image: url(../img/mobile-doors.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/mobile-doors.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
   background-color: #464646; }
   @media (min-width: 600px) {
     section#home {
-      background-image: url(../img/doors-tablet.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/doors-tablet.jpg); } }
   @media (min-width: 1025px) {
     section#home {
       width: 100%;
-      height: 100vh;
-      background-image: url(../img/doors2.jpg);
-      top: 70px;
-      position: relative; } }
+      height: 92vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/effect-windows.jpg);
+      background-size: 100%;
+      position: relative;
+      background-position: center 100px; } }
 
 #slogan {
-  top: 15em;
+  top: 20em;
   position: relative;
   height: 15em; }
 
@@ -302,10 +323,10 @@ section#home {
   text-align: center; }
   @media (min-width: 1025px) {
     .tagline {
-      font-size: 4.5rem; } }
+      font-size: 3.5rem; } }
 
 .tagline2 {
-  color: #376ab0;
+  color: #fff;
   font-size: 1.5rem;
   text-shadow: 0px 6px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
   font-family: walkway_boldregular;
@@ -313,37 +334,33 @@ section#home {
   margin-top: 0; }
   @media (min-width: 1025px) {
     .tagline2 {
-      font-size: 2.5rem; } }
+      font-size: 2.3rem; } }
 
 /* ------------------------------------------
   ==About
 --------------------------------------------- */
 #about {
   position: relative;
-  background-color: #212020;
+  background-color: #333;
   height: 100vh; }
-  @media (min-width: 1025px) {
-    #about {
-      border-style: inset;
-      border-color: #d0d5db;
-      border-width: 10px; } }
   #about h3 {
     font-size: 1.4rem;
     padding-top: 1em;
     padding-bottom: 0.5em;
-    color: #376ab0;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
-  #about .white {
     color: #fff;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
+  #about .blue {
+    color: #376ab0;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
   #about .about-text {
     width: 90%;
     margin: 0 auto;
     text-align: center; }
   #about p {
-    color: white;
+    color: #eee;
     line-height: 1.5em;
-    font-size: 0.9rem; }
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif; }
   @media (min-width: 600px) {
     #about .about-text {
       text-align: left;
@@ -354,12 +371,13 @@ section#home {
     #about {
       height: 500px; }
       #about h3 {
+        font-family: walkway_boldregular, sans-serif;
         font-size: 2rem;
-        padding-top: 1em; }
+        padding-top: 2.3em; }
       #about p {
         line-height: 1.3em;
-        padding-top: 0.5em;
-        font-size: 1.3rem; }
+        padding-top: 0.8em;
+        font-size: 1.2rem; }
       #about .about-text {
         width: 45%;
         margin-left: 15em; } }
@@ -368,14 +386,16 @@ section#home {
   ==building background image
 --------------------------------------------- */
 #building {
-  background-image: url(../img/windows.jpg);
-  background-size: cover;
+  background-image: url(../img/new-build-double-glazing.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
-  min-height: 100%;
-  height: 35em;
+  background-color: #333;
+  height: 80vh;
   width: 100%;
-  background-attachment: fixed;
-  background-position: 50% 50%; }
+  background-attachment: fixed; }
+  @media (min-width: 1025px) {
+    #building {
+      background-position: center 100px; } }
 
 /* ------------------------------------------
   ==Projects
@@ -414,9 +434,9 @@ section#home {
   text-align: center; }
   .address h5 {
     color: #376ab0;
-    font-size: 1.3rem;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
-    font-family: sans-serif;
+    font-size: 2rem;
+    font-family: walkway_boldregular, sans-serif;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
     padding-top: 2em;
     margin-left: 3em; }
   .address p {
@@ -424,10 +444,11 @@ section#home {
     margin-left: 3em;
     color: white;
     line-height: 1.5em;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    font-family: Roboto, sans-serif; }
   .address span {
     color: #376ab0;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
     font-family: sans-serif; }
   @media (min-width: 600px) {
     .address {
@@ -446,14 +467,14 @@ section#home {
   clear: both; }
 
 #ContactUs {
-  background-color: #212020;
+  background-color: #333;
   margin: 0 auto; }
   #ContactUs h1 {
-    color: #376ab0;
+    color: #fff;
     font-size: 2.5rem;
     text-align: center;
-    text-shadow: 0px 6px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px transparent, 0px 6px 0px rgba(0, 0, 0, 0.1);
-    font-family: sans-serif;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px transparent, 0px 3px 0px rgba(0, 0, 0, 0.1);
+    font-family: walkway_boldregular, sans-serif;
     padding-top: 0.5em; }
   @media (min-width: 600px) {
     #ContactUs {
@@ -464,8 +485,8 @@ section#home {
       #ContactUs h1 {
         text-align: left;
         padding-left: 2em;
-        font-size: 2.4rem;
-        padding-bottom: 0.5em; } }
+        font-size: 2rem;
+        padding: 2em 0 0.5em 0; } }
 
 .formblock {
   text-align: center; }
@@ -483,7 +504,6 @@ section#home {
       float: left; } }
 
 #contact .desc h2 {
-  font-family: Georgia, Tahoma, sans-serif;
   font-weight: normal;
   letter-spacing: -0.03em;
   color: #444;
@@ -491,7 +511,7 @@ section#home {
   margin-bottom: 8px; }
 
 #contact .desc p {
-  font-family: Arial, Verdana, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 1.2em;
   color: #333;
   line-height: 1.3em;
@@ -506,9 +526,8 @@ section#home {
   display: block;
   font-style: italic;
   font-weight: normal;
-  color: #232323;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #5f6d7a;
+  font-family: Roboto, sans-serif;
+  color: #eee;
   text-align: center; }
   @media (min-width: 1025px) {
     #contact .formblock label {
@@ -517,13 +536,13 @@ section#home {
 #contact .formblock .txt {
   padding: 4px 6px;
   font-size: 1.6em;
-  font-family: Arial, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   color: #666;
   width: 330px; }
 
 #contact .formblock .txtarea {
   font-size: 1.5em;
-  font-family: Arial, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   padding: 3px 5px;
   color: #666;
   width: 330px;
@@ -534,16 +553,16 @@ section#home {
   font-weight: bold;
   font-size: 1.2em;
   font-style: normal;
-  font-family: Arial, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   color: #9d3131; }
 
 #contact .info {
   text-align: center;
   font-weight: bold;
-  font-size: 1.3em;
-  color: #376ab0;
+  font-size: 1.2em;
+  color: #eee;
   margin-bottom: 10px;
-  font-family: Arial, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
   @media (min-width: 1025px) {
     #contact .info {
@@ -551,7 +570,7 @@ section#home {
       padding-left: 13em; } }
 
 #contact p.tick {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
   font-style: italic;
   font-size: 1.2em;
   color: #3e669c; }
@@ -560,8 +579,9 @@ section#home {
   padding: 3px 7px;
   font-size: 1.1em;
   font-weight: bold;
-  font-family: "Trebuchet MS", Arial, Tahoma, sans-serif;
-  color: #565656;
+  font-family: Roboto, sans-serif;
+  color: #eee;
+  background-color: #376ab0;
   margin-left: 11em;
   text-align: center; }
   @media (min-width: 961px) {
