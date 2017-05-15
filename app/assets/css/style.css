@@ -85,6 +85,7 @@ a:hover {
 --------------------------------------------- */
 .top--Header {
   display: inline-block;
+  text-align: center;
   height: 30px;
   width: 100%;
   position: fixed;
@@ -94,12 +95,15 @@ a:hover {
   border-bottom: 1px solid rgba(160, 160, 159, 0.3); }
   .top--Header h4 {
     background-color: #000;
-    display: inline-block;
+    display: inline;
     width: 10%;
     padding: 6px;
     font-size: 0.8rem;
     color: #fff;
     font-family: walkway_boldregular; }
+  @media (min-width: 1025px) {
+    .top--Header {
+      text-align: left; } }
 
 /* ------------------------------------------
   FIXED HEADER
@@ -297,6 +301,7 @@ section#home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/mobile-doors.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-color: #464646; }
   @media (min-width: 600px) {
     section#home {
@@ -308,7 +313,8 @@ section#home {
       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/effect-windows.jpg);
       background-size: 100%;
       position: relative;
-      background-position: center 100px; } }
+      background-position: center 100px;
+      background-attachment: fixed; } }
 
 #slogan {
   top: 20em;
@@ -342,7 +348,10 @@ section#home {
 #about {
   position: relative;
   background-color: #333;
-  height: 100vh; }
+  height: 60vh; }
+  @media (min-width: 1025px) {
+    #about {
+      height: 100vh; } }
   #about h3 {
     font-size: 1.4rem;
     padding-top: 1em;
@@ -386,12 +395,13 @@ section#home {
   ==building background image
 --------------------------------------------- */
 #building {
-  background-image: url(../img/new-build-double-glazing.jpg);
-  background-size: contain;
+  background-image: url(../img/IMG_4535.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #333;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
+  max-width: 100%;
   background-attachment: fixed; }
   @media (min-width: 1025px) {
     #building {

@@ -30,6 +30,7 @@ section#home {
   background-repeat: no-repeat;
   //background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
   background-color: #464646;
   @include breakpoint ($tablet-portrait){
     background-image: linear-gradient(
@@ -50,6 +51,7 @@ section#home {
     background-size: 100%;
     position: relative;
     background-position: center 100px;
+    background-attachment: fixed;
   } //desktop
 } //home
 
@@ -93,10 +95,12 @@ section#home {
 
 #about {
     position: relative;
-    background-color: #333  ;
-    height: 100vh;
+    background-color: #333;
+    height: 40vh;
 
     @include breakpoint ($desktop){
+      height: 100vh;
+
   }
 
 
@@ -108,16 +112,10 @@ section#home {
     text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
                  0px 4px 1px rgba(0,0,0,0.1),
                  0px 1px 0px rgba(0,0,0,0.1);
+     @include breakpoint ($desktop){
+      padding-top: 2em
     }
-//     h3:before {
-//   content : "";
-//   position: absolute;
-//   left    : 0;
-//   bottom  : 0;
-//   height  : 1px;
-//   width   : 60%;  /* or 100px */
-//   border-bottom: 1px solid magenta;
-// }
+
 
     .blue{
       color: $blue;
@@ -139,7 +137,8 @@ section#home {
       font-size: 0.8rem;
       font-family: 'Roboto', sans-serif;
     }
-    @include breakpoint ($tablet-portrait){
+    @include breakpoint ($tablet-landscape){
+        height: 60vh;
       .about-text {
         text-align: left;
         width: 60%;
@@ -149,7 +148,6 @@ section#home {
       }
     } //tablet
     @include breakpoint ($desktop){
-      height: 500px;
       h3 {
         font-family: walkway_boldregular, sans-serif;
         font-size: 2rem;
@@ -173,12 +171,13 @@ section#home {
 --------------------------------------------- */
 
 #building{
-  background-image: url(../img/new-build-double-glazing.jpg);
-  background-size: contain;
+  background-image: url(../img/IMG_4535.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #333;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
+  max-width: 100%;
   background-attachment: fixed;
   //@include breakpoint ($tablet-portrait){} //tablet
   @include breakpoint ($desktop){
