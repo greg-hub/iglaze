@@ -348,7 +348,7 @@ section#home {
 #about {
   position: relative;
   background-color: #333;
-  height: 60vh; }
+  height: 30em; }
   #about h3 {
     font-size: 1.4rem;
     padding-top: 1em;
@@ -448,7 +448,9 @@ section#home {
 --------------------------------------------- */
 section.Enquiries {
   background-color: #333;
-  height: 70vh; }
+  height: 33em;
+  float: right;
+  position: inherit; }
   section.Enquiries .address {
     width: 100%;
     text-align: center; }
@@ -457,7 +459,7 @@ section.Enquiries {
       font-size: 2rem;
       font-family: walkway_boldregular, sans-serif;
       text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
-      padding-top: 2em;
+      padding-top: 6em;
       text-align: center; }
     section.Enquiries .address p {
       padding-top: 0.5em;
@@ -481,7 +483,7 @@ section.Enquiries {
           padding-top: 5em; } }
   @media (min-width: 1025px) {
     section.Enquiries .img--left {
-      height: 70vh;
+      height: 33em;
       width: 50%;
       background-image: url(../img/FullSizeRender.jpg);
       background-size: cover;
@@ -512,9 +514,9 @@ section#ContactUs {
       margin: 0 auto; } }
   @media (min-width: 1025px) {
     section#ContactUs {
-      height: 70vh; }
+      height: 35em; }
       section#ContactUs .img--right {
-        height: 70vh;
+        height: 35em;
         width: 50%;
         background-image: url(../img/FullSizeRender.jpg);
         background-size: cover;
@@ -527,7 +529,7 @@ section#ContactUs {
         text-align: left;
         margin-left: 2em;
         font-size: 2rem;
-        padding: 2em 0 0.5em 0; } }
+        padding: 0.5em 0 0.5em 0; } }
 
 .formblock {
   text-align: center; }

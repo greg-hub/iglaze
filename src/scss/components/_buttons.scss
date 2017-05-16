@@ -16,9 +16,9 @@ section#ContactUs {
       margin: 0 auto;
   } //tablet
   @include breakpoint($desktop){
-      height: 70vh;
+      height: 35em;
     .img--right {
-      height: 70vh;
+      height: 35em;
       width: 50%;
       background-image: url(../img/FullSizeRender.jpg);
       background-size: cover;
@@ -37,7 +37,7 @@ section#ContactUs {
     text-align: left;
     margin-left: 2em;
     font-size: 2rem;
-    padding:2em 0 0.5em 0;
+    padding: 0.5em 0 0.5em 0;
 
   }
   } //desktop
