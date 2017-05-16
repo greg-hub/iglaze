@@ -1,8 +1,6 @@
-#ContactUs {
+section#ContactUs {
   background-color: #333;
-  margin: 0 auto;
-  height: 80vh;
-  width: 80%;
+  height: 50vh;
   h1{
     color: #fff;
     font-size: 2.5rem;
@@ -13,16 +11,34 @@
     font-family: walkway_boldregular, sans-serif;
     padding-top: 0.5em;
     }
-  @include breakpoint($tablet-portrait){
-    margin: 0 auto;
+    @include breakpoint($tablet-landscape){
+      width: 100%;
+      margin: 0 auto;
   } //tablet
   @include breakpoint($desktop){
-    height: 100vh;
+      height: 70vh;
+    .img--right {
+      height: 70vh;
+      width: 50%;
+      background-image: url(../img/FullSizeRender.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      float: right;
+    }
+
+    #contact-form {
+      width: 50%;
+      float: left
+    }
+
+
+
   h1 {
     text-align: left;
-    padding-left: 2em;
+    margin-left: 2em;
     font-size: 2rem;
     padding:2em 0 0.5em 0;
+
   }
   } //desktop
 } //contact
@@ -31,18 +47,21 @@
   text-align: center;
   @include breakpoint($desktop) {
     text-align: left;
-    padding-left: 13em;
+    padding-left: 6em;
   }
 }
 
-#contact {
-  width: 100%;
-  margin: 0 auto;
-  @include breakpoint($desktop){
-    width: 50%;
-    float: left;
-  }
-}
+
+
+
+
+// #contact {
+//   width: 100%;
+//   margin: 0 auto;
+//   @include breakpoint($desktop){
+//     width: 50%;
+//     float: left;
+//   }
 
 
 
@@ -114,7 +133,7 @@
                0px 1px 0px rgba(0,0,0,0.1);
   @include breakpoint($desktop){
     text-align: left;
-    padding-left: 13em;
+    margin-left: 6em;
   }
 }
 
@@ -124,6 +143,15 @@
   color: #3e669c;
 }
 
+.button--containter {
+  width: 100%;
+  text-align: center;
+    @include breakpoint($desktop){
+      text-align: left;
+      margin-left: 4em;
+    }
+}
+
 #contact .subbutton {
   padding: 3px 7px;
   font-size: 1.1em;
@@ -131,10 +159,9 @@
   font-family: Roboto, sans-serif;
   color: #eee;
   background-color: $blue;
-  margin-left: 11em;
   text-align: center;
   @include breakpoint($tablet-landscape) {
-    margin-left: 12em;
+    margin-left: 2em;
   }
 }
 
@@ -143,6 +170,7 @@ p.alert {
   text-align: center;
   @include breakpoint($desktop){
     text-align: left;
-    padding-left: 20em;
+    margin-left: 6em;
+
   }
 }

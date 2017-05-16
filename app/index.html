@@ -100,17 +100,17 @@ if(isset($_POST['submitted'])) {
 
     </section>
 
-<!--about-->
+    <!--about-->
 
-    <section id="about">
-      <div class="about-text">
-        <h3>About <span class="blue">i</span>glaz<span class="blue">e</span></h3>
-          <p>iGlaze fabricate a complete range of Smarts Aluminium products including windows, bi-folding doors, sliding doors, residential & commercial doors and curtain walling from our dedicated factory in Kent.</p>
-          <p>We offer both supply & delivery for trade clients and design and installation for residential and contractors.</p>
-          <p>Our custom quoting & order control software INSTANT Q guides all clients through the process with a high level of detail and efficiency.</p>
-          <p>Contact us for a free quotation today. </p>
-      </div>
-    </section>
+        <section id="about">
+          <div class="about-text">
+            <h3>About <span class="blue">i</span>glaz<span class="blue">e</span></h3>
+              <p>iGlaze fabricate a complete range of Smarts Aluminium products including windows, bi-folding doors, sliding doors, residential & commercial doors and curtain walling from our dedicated factory in Kent.</p>
+              <p>We offer both supply & delivery for trade clients and design and installation for residential and contractors.</p>
+              <p>Our custom quoting & order control software INSTANT Q guides all clients through the process with a high level of detail and efficiency.</p>
+              <p>Contact us for a free quotation today. </p>
+          </div>
+        </section>
 
 
     <!--building scroll-->
@@ -140,6 +140,8 @@ if(isset($_POST['submitted'])) {
 <!--Contacts-->
 
         <section id="ContactUs">
+
+            <div class="img--right"></div>
 
       <h1>Contact</h1>
 
@@ -183,30 +185,30 @@ if(isset($_POST['submitted'])) {
 								<br /><span class="error"><?php echo $commentError;?></span>
 							<?php } ?>
 						</div>
-
+            <div class="button--containter">
 							<button name="submit" type="submit" class="subbutton"><span>Submit<span></button>
 							<input type="hidden" name="submitted" id="submitted" value="true" />
+            </div>
 					</form>
 				</div>
 
 			<?php } ?>
-		</div>
+
+    </div>
     </div><!-- End #contact -->
+  </section>
 
+  <section class="Enquiries">
+    <div class="img--left"></div>
+    <div class="address">
+     <h5>Enquiries</h5>
+     <p>Wingham Works Unit 1 <br> Goodnestone Road <br> Wingham Kent CT3 1AR</p>
+     <p><span>Tel:</span> 01227 722302</p>
+     <p><span>Mob:</span> 07983 048078</p>
+     <p><span>Email:</span> sales@iglaze.com</p>
+    </div>
 
-
-           <!-- <div class="address">
-        <h5>Enquiries</h5>
-        <p>Wingham Works Unit 1 <br> Goodnestone Road <br> Wingham Kent CT3 1AR</p>
-        <p><span>Tel:</span> 01227 722302</p>
-        <p><span>Mob:</span> 07983 048078</p>
-        <p><span>Email:</span> sales@iglaze.com</p>
-      </div> -->
-
-    </section>
-
-
-
+  </section>
 
     <script src="assets/js/fastclick.js"></script>
     <script src="assets/js/scroll.js"></script>

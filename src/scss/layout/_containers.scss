@@ -92,29 +92,31 @@ section#home {
 /* ------------------------------------------
   ==About
 --------------------------------------------- */
-
 #about {
     position: relative;
     background-color: #333;
-    height: 40vh;
+    height: 60vh;
 
-    @include breakpoint ($desktop){
-      height: 100vh;
-
-  }
+  //   @include breakpoint ($desktop){
+  //     height: 100vh;
+  //
+  // }
 
 
   h3 {
     font-size: 1.4rem;
     padding-top: 1em;
     padding-bottom: 0.5em;
+    text-align: center;
     color: #fff;
     text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
                  0px 4px 1px rgba(0,0,0,0.1),
                  0px 1px 0px rgba(0,0,0,0.1);
      @include breakpoint ($desktop){
-      padding-top: 2em
+      padding-top: 2em;
+      text-align: left;
     }
+  }
 
 
     .blue{
@@ -137,8 +139,7 @@ section#home {
       font-size: 0.8rem;
       font-family: 'Roboto', sans-serif;
     }
-    @include breakpoint ($tablet-landscape){
-        height: 60vh;
+    @include breakpoint ($tablet-landscape) {
       .about-text {
         text-align: left;
         width: 60%;
@@ -152,6 +153,7 @@ section#home {
         font-family: walkway_boldregular, sans-serif;
         font-size: 2rem;
         padding-top: 2.3em;
+        color: eee;
       }
       p {
         line-height: 1.3em;
@@ -164,7 +166,6 @@ section#home {
       }
     } //desktop
 } // about
-
 
 /* ------------------------------------------
   ==building background image
@@ -225,46 +226,77 @@ section#home {
   }
 }
 
+
+/* ------------------------------------------
+  ==float--right
+--------------------------------------------- */
+
+
 /* ------------------------------------------
   ==contact
 --------------------------------------------- */
-.address{
-  width: 90%;
-  text-align: center;
-  h5 {
-    color: #376ab0;
-    font-size: 2rem;
-    font-family: walkway_boldregular, sans-serif;
-    text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
-    0px 4px 1px rgba(0,0,0,0.1),
-    0px 3px 0px rgba(0,0,0,0.1);
-    padding-top: 2em;
-    margin-left: 3em;
 
-  }
-  p {
-    padding-top: 0.5em;
-    margin-left: 3em;
-    color: white;
-    line-height: 1.5em;
-    font-size: 1.3rem;
-    font-family: Roboto, sans-serif;
-  }
-  span {
-    color: #376ab0;
-    text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
-    0px 4px 1px rgba(0,0,0,0.1),
-    0px 3px 0px rgba(0,0,0,0.1);
-    font-family: sans-serif;
-  }
-  @include breakpoint($tablet-portrait) {
-    text-align: left;
-  } //tablet
+
+/* ------------------------------------------
+  ==Enquiries
+--------------------------------------------- */
+section.Enquiries {
+  background-color: #333;
+  height: 70vh;
+  .address{
+    width: 100%;
+    text-align: center;
+    h5 {
+      color: #376ab0;
+      font-size: 2rem;
+      font-family: walkway_boldregular, sans-serif;
+      text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
+      0px 4px 1px rgba(0,0,0,0.1),
+      0px 3px 0px rgba(0,0,0,0.1);
+      padding-top: 2em;
+      text-align: center;
+
+
+    }
+    p {
+      padding-top: 0.5em;
+      text-align: center;
+      color: white;
+      line-height: 1.5em;
+      font-size: 1.3rem;
+      font-family: Roboto, sans-serif;
+    }
+    span {
+      color: #376ab0;
+      text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
+      0px 4px 1px rgba(0,0,0,0.1),
+      0px 3px 0px rgba(0,0,0,0.1);
+      font-family: sans-serif;
+    }
+    @include breakpoint($tablet-portrait) {
+      text-align: left;
+    } //tablet
+    @include breakpoint($desktop) {
+      width: 50%;
+      float: right;
+      h5{
+        padding-top: 5em;
+      }
+    } //desktop
+  } //address
+
   @include breakpoint($desktop) {
-    width: 50%;
-    float: right;
-  } //desktop
-} //address
+      .img--left{
+      height: 70vh;
+      width: 50%;
+      background-image: url(../img/FullSizeRender.jpg);
+      background-size: cover  ;
+      background-repeat: no-repeat  ;
+      float: left;
+    }
+  }
+
+}
 
 /* ------------------------------------------
   ==clearfix
