@@ -16,3 +16,12 @@ img {
     width: 100%;
     max-width: 100%;
 }
+
+/* ------------------------------------------
+  ==clearfix
+--------------------------------------------- */
+.clearfix:after {
+  content:" ";
+  display:table;
+  clear:both;
+}

@@ -9,6 +9,14 @@ img {
   width: 100%;
   max-width: 100%; }
 
+/* ------------------------------------------
+  ==clearfix
+--------------------------------------------- */
+.clearfix:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
 body, div,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
@@ -280,20 +288,6 @@ li.menu-item {
   content: "\78";
   /* Close icon */ }
 
-body {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #333;
-  background: #fff;
-  font: normal 100%/1.4 sans-serif; }
-
-section {
-  height: 600px;
-  width: 100%;
-  position: relative;
-  box-sizing: border-box; }
-
 /* ------------------------------------------
   ==Home
 --------------------------------------------- */
@@ -392,6 +386,20 @@ section#home {
       width: 45%;
       margin-left: 15em; } }
 
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  background: #fff;
+  font: normal 100%/1.4 sans-serif; }
+
+section {
+  height: 600px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box; }
+
 /* ------------------------------------------
   ==building background image
 --------------------------------------------- */
@@ -438,66 +446,8 @@ section#home {
     color: #000; }
 
 /* ------------------------------------------
-  ==float--right
---------------------------------------------- */
-/* ------------------------------------------
   ==contact
 --------------------------------------------- */
-/* ------------------------------------------
-  ==Enquiries
---------------------------------------------- */
-section.Enquiries {
-  background-color: #333;
-  height: 33em;
-  float: right;
-  position: inherit; }
-  section.Enquiries .address {
-    width: 100%;
-    text-align: center; }
-    section.Enquiries .address h5 {
-      color: #376ab0;
-      font-size: 2rem;
-      font-family: walkway_boldregular, sans-serif;
-      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
-      padding-top: 6em;
-      text-align: center; }
-    section.Enquiries .address p {
-      padding-top: 0.5em;
-      text-align: center;
-      color: white;
-      line-height: 1.5em;
-      font-size: 1.3rem;
-      font-family: Roboto, sans-serif; }
-    section.Enquiries .address span {
-      color: #376ab0;
-      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
-      font-family: sans-serif; }
-    @media (min-width: 600px) {
-      section.Enquiries .address {
-        text-align: left; } }
-    @media (min-width: 1025px) {
-      section.Enquiries .address {
-        width: 50%;
-        float: right; }
-        section.Enquiries .address h5 {
-          padding-top: 5em; } }
-  @media (min-width: 1025px) {
-    section.Enquiries .img--left {
-      height: 33em;
-      width: 50%;
-      background-image: url(../img/FullSizeRender.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      float: left; } }
-
-/* ------------------------------------------
-  ==clearfix
---------------------------------------------- */
-.clearfix:after {
-  content: " ";
-  display: table;
-  clear: both; }
-
 section#ContactUs {
   background-color: #333;
   height: 50vh; }
@@ -637,3 +587,50 @@ p.alert {
     p.alert {
       text-align: left;
       margin-left: 6em; } }
+
+/* ------------------------------------------
+  ==Enquiries
+--------------------------------------------- */
+section.Enquiries {
+  background-color: #333;
+  height: 33em;
+  float: right;
+  position: inherit; }
+  section.Enquiries .address {
+    width: 100%;
+    text-align: center; }
+    section.Enquiries .address h5 {
+      color: #376ab0;
+      font-size: 2rem;
+      font-family: walkway_boldregular, sans-serif;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
+      padding-top: 6em;
+      text-align: center; }
+    section.Enquiries .address p {
+      padding-top: 0.5em;
+      text-align: center;
+      color: white;
+      line-height: 1.5em;
+      font-size: 1.3rem;
+      font-family: Roboto, sans-serif; }
+    section.Enquiries .address span {
+      color: #376ab0;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
+      font-family: sans-serif; }
+    @media (min-width: 600px) {
+      section.Enquiries .address {
+        text-align: left; } }
+    @media (min-width: 1025px) {
+      section.Enquiries .address {
+        width: 50%;
+        float: right; }
+        section.Enquiries .address h5 {
+          padding-top: 5em; } }
+  @media (min-width: 1025px) {
+    section.Enquiries .img--left {
+      height: 33em;
+      width: 50%;
+      background-image: url(../img/FullSizeRender.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      float: left; } }
