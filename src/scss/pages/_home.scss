@@ -1,0 +1,94 @@
+/* ------------------------------------------
+  ==Home
+--------------------------------------------- */
+
+section#home {
+  //mobile
+  @include breakpoint ($mobile) {
+    height: 70vh;
+    max-height: auto;
+    background-image: url(../img/mobile-home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-attachment: fixed bottom;
+    background-color: #464646;
+  }
+
+  @include breakpoint ($five) {
+    max-height: auto;
+    background-image: url(../img/mobile-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed bottom;
+  }
+
+    @include breakpoint ($tablet) {
+      background-image: url(../img/home/home-tab1.jpg);
+      background-position: center left ;
+
+
+
+    }
+
+
+  // @include breakpoint ($tablet-portrait){
+  //   // height: 40em;
+  //   // min-height: 40em;
+  //
+  //
+  //  background-image: url(./img/mobile-home.jpg);
+  //   height: 30em;
+  //   // width: 100%;
+  // // background-size: 100% 100%;
+  //   background-size: contain;
+  //   background-attachment: fixed;
+  //   background-position: center 10px;
+  // } // tablet
+
+  @include breakpoint ($desktop){
+    width: 100%;
+    height: 92vh;
+    background-image: url(../img/effect-windows.jpg);
+    background-size: 100%;
+    position: relative;
+    background-position: center 100px;
+    background-attachment: fixed;
+  } //desktop
+} //home
+
+#slogan {
+  //mobile
+  top: 20em;
+  position: relative;
+  height: 5em;
+  background-color: rgba(0,0,0,.4);;
+}
+
+.tagline {
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 1px rgba(0,0,0,0.1),
+  0px 1px 0px rgba(0,0,0,0.1);
+  font-family: $primary-font;
+  text-align: center;
+  @include breakpoint ($desktop){
+    font-size: 3.5rem;
+  }
+}
+
+.tagline2{
+  color: #fff;
+  font-size: 0.8rem;
+  text-shadow: 0px 6px 3px rgba(0,0,0,0.4),
+  0px 8px 1px rgba(0,0,0,0.1),
+  0px 6px 0px rgba(0,0,0,0.1);
+  font-family: $primary-font;
+  text-align: center;
+  margin-top: 1em;
+  @include breakpoint ($desktop){
+    font-size: 2.3rem;
+  }
+}

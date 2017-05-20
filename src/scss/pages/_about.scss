@@ -4,16 +4,15 @@
 #about {
     position: relative;
     background-color: #333;
-    height: 30em;
+    height: 28em;
 
-  //   @include breakpoint ($desktop){
-  //     height: 100vh;
-  //
-  // }
+    @include breakpoint ($desktop){
+      height: 35em;
+    }
 
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     padding-top: 1em;
     padding-bottom: 0.5em;
     text-align: center;
@@ -45,8 +44,11 @@
     p {
       color: #eee;
       line-height: 1.5em;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-family: 'Roboto', sans-serif;
+      text-align: left;
+      margin-top: 0.5em;
+
     }
     @include breakpoint ($tablet-landscape) {
       .about-text {

@@ -106,7 +106,7 @@ a:hover {
     display: inline;
     width: 10%;
     padding: 6px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #fff;
     font-family: walkway_boldregular; }
   @media (min-width: 1025px) {
@@ -291,33 +291,50 @@ li.menu-item {
 /* ------------------------------------------
   ==Home
 --------------------------------------------- */
-section#home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/mobile-doors.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #464646; }
-  @media (min-width: 600px) {
-    section#home {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/doors-tablet.jpg); } }
-  @media (min-width: 1025px) {
-    section#home {
-      width: 100%;
-      height: 92vh;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/effect-windows.jpg);
-      background-size: 100%;
-      position: relative;
-      background-position: center 100px;
-      background-attachment: fixed; } }
+@media (min-width: 300px) {
+  section#home {
+    height: 80vh;
+    max-height: auto;
+    background-image: url(../img/mobile-home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-attachment: fixed bottom;
+    background-color: #464646; } }
+
+@media (min-width: 501px) {
+  section#home {
+    max-height: auto;
+    background-image: url(../img/mobile-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed bottom; } }
+
+@media (min-width: 650px) {
+  section#home {
+    background-image: url(../img/home/home-tab1.jpg);
+    background-position: center left; } }
+
+@media (min-width: 1025px) {
+  section#home {
+    width: 100%;
+    height: 92vh;
+    background-image: url(../img/effect-windows.jpg);
+    background-size: 100%;
+    position: relative;
+    background-position: center 100px;
+    background-attachment: fixed; } }
 
 #slogan {
   top: 20em;
   position: relative;
-  height: 15em; }
+  height: 5em;
+  background-color: rgba(0, 0, 0, 0.4); }
 
 .tagline {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
   font-family: walkway_boldregular;
   text-align: center; }
@@ -327,11 +344,11 @@ section#home {
 
 .tagline2 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   text-shadow: 0px 6px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 6px 0px rgba(0, 0, 0, 0.1);
   font-family: walkway_boldregular;
   text-align: center;
-  margin-top: 0; }
+  margin-top: 1em; }
   @media (min-width: 1025px) {
     .tagline2 {
       font-size: 2.3rem; } }
@@ -342,9 +359,12 @@ section#home {
 #about {
   position: relative;
   background-color: #333;
-  height: 30em; }
+  height: 28em; }
+  @media (min-width: 1025px) {
+    #about {
+      height: 35em; } }
   #about h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     padding-top: 1em;
     padding-bottom: 0.5em;
     text-align: center;
@@ -364,8 +384,10 @@ section#home {
   #about p {
     color: #eee;
     line-height: 1.5em;
-    font-size: 0.8rem;
-    font-family: 'Roboto', sans-serif; }
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin-top: 0.5em; }
   @media (min-width: 961px) {
     #about .about-text {
       text-align: left;
@@ -404,53 +426,47 @@ section {
   ==building background image
 --------------------------------------------- */
 #building {
-  background-image: url(../img/IMG_4535.jpg);
+  background-image: url(../img/mobile-doors.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #333;
-  height: 90vh;
+  height: 33em;
   width: 100%;
   max-width: 100%;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-position: center 118px; }
+  #building img {
+    width: 90%; }
+  @media (min-width: 600px) {
+    #building {
+      height: 40em;
+      background-image: url(../img/mobile-doors.jpg);
+      background-size: cover;
+      background-position: center 100px; } }
   @media (min-width: 1025px) {
     #building {
       background-position: center 100px; } }
 
 /* ------------------------------------------
-  ==Projects
---------------------------------------------- */
-#Projects {
-  height: 40em;
-  padding: 0;
-  margin: 0; }
-  #Projects #work {
-    background-image: url(../img/effect.jpg);
-    height: 30em;
-    min-height: 40em;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-size: cover; }
-  #Projects h3 {
-    font-size: 2rem;
-    padding-top: 1em;
-    color: #376ab0;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
-    margin-left: 2em; }
-
-/* ------------------------------------------
-  ==order
---------------------------------------------- */
-#order {
-  height: 40em; }
-  #order h1 {
-    color: #000; }
-
-/* ------------------------------------------
   ==contact
 --------------------------------------------- */
+/* Img */
+.img--split {
+  height: 28em;
+  background-image: url(../img/mobile-windows.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top; }
+  @media (min-width: 961px) {
+    .img--split {
+      display: none; } }
+  @media (min-width: 1025px) {
+    .img--split {
+      display: none; } }
+
 section#ContactUs {
   background-color: #333;
-  height: 50vh; }
+  height: 36em; }
   section#ContactUs h1 {
     color: #fff;
     font-size: 2.5rem;
@@ -593,7 +609,7 @@ p.alert {
 --------------------------------------------- */
 section.Enquiries {
   background-color: #333;
-  height: 33em;
+  height: 22em;
   float: right;
   position: inherit; }
   section.Enquiries .address {
@@ -604,7 +620,7 @@ section.Enquiries {
       font-size: 2rem;
       font-family: walkway_boldregular, sans-serif;
       text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
-      padding-top: 6em;
+      padding-top: 1em;
       text-align: center; }
     section.Enquiries .address p {
       padding-top: 0.5em;
@@ -634,3 +650,9 @@ section.Enquiries {
       background-size: cover;
       background-repeat: no-repeat;
       float: left; } }
+
+footer {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #fff;
+  background-color: black; }
