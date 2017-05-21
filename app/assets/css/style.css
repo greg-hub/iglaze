@@ -6,8 +6,9 @@
   font-style: normal; }
 
 img {
+  max-width: 100%;
   width: 100%;
-  max-width: 100%; }
+  height: auto; }
 
 /* ------------------------------------------
   ==clearfix
@@ -109,13 +110,19 @@ a:hover {
     font-size: 1rem;
     color: #fff;
     font-family: walkway_boldregular; }
-  @media (min-width: 1025px) {
+  @media (min-width: 850px) {
     .top--Header {
       text-align: left; } }
 
 /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
+.header--container {
+  height: 8.5em; }
+  @media (min-width: 300px) {
+    .header--container {
+      height: 3em; } }
+
 header {
   background: #000;
   position: fixed;
@@ -124,6 +131,12 @@ header {
   left: 0;
   top: 30px;
   border-bottom: 1px solid rgba(160, 160, 159, 0.3); }
+  @media (min-width: 850px) {
+    header {
+      height: 7em; } }
+  @media (min-width: 1350px) {
+    header {
+      height: 7em; } }
 
 .logo {
   background: url(../img/logo-mobile.png);
@@ -137,7 +150,7 @@ header {
   padding: 0 20px;
   color: #fff;
   float: left; }
-  @media (min-width: 1025px) {
+  @media (min-width: 850px) {
     .logo {
       position: absolute;
       top: 5px; } }
@@ -293,13 +306,12 @@ li.menu-item {
 --------------------------------------------- */
 @media (min-width: 300px) {
   section#home {
-    height: 80vh;
+    height: 70vh;
     max-height: auto;
     background-image: url(../img/mobile-home.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center top;
-    background-attachment: fixed bottom;
     background-color: #464646; } }
 
 @media (min-width: 501px) {
@@ -308,39 +320,67 @@ li.menu-item {
     background-image: url(../img/mobile-home.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    background-attachment: fixed bottom; } }
+    background-size: cover; } }
 
 @media (min-width: 650px) {
   section#home {
-    background-image: url(../img/home/home-tab1.jpg);
-    background-position: center left; } }
+    height: 80vh;
+    background-image: url(../img/home/home-test.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover; } }
 
-@media (min-width: 1025px) {
+@media (min-width: 850px) {
   section#home {
-    width: 100%;
-    height: 92vh;
-    background-image: url(../img/effect-windows.jpg);
-    background-size: 100%;
-    position: relative;
-    background-position: center 100px;
+    height: 90vh;
+    background-image: url(../img/home/home-test.jpg);
+    background-size: cover;
+    background-position: center bottom; } }
+
+@media (min-width: 1024px) {
+  section#home {
+    height: 100vh;
+    background-image: url(../img/home/home-doors.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed; } }
+
+@media (min-width: 1350px) {
+  section#home {
+    height: 90vh;
+    background-image: url(../img/home/home-doors.jpg);
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed; } }
 
 #slogan {
-  top: 20em;
+  top: 15em;
   position: relative;
   height: 5em;
   background-color: rgba(0, 0, 0, 0.4); }
+  @media (min-width: 650px) {
+    #slogan {
+      background-color: rgba(0, 0, 0, 0.4);
+      top: 25em;
+      height: 6em; } }
+  @media (min-width: 850px) {
+    #slogan {
+      background-color: rgba(0, 0, 0, 0.4);
+      top: 25em;
+      height: 8em; } }
 
 .tagline {
   color: #fff;
   font-size: 2rem;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1);
   font-family: walkway_boldregular;
   text-align: center; }
-  @media (min-width: 1025px) {
+  @media (min-width: 650px) {
     .tagline {
-      font-size: 3.5rem; } }
+      font-size: 2.5rem; } }
+  @media (min-width: 850px) {
+    .tagline {
+      font-size: 3rem;
+      top: 20em; } }
 
 .tagline2 {
   color: #fff;
@@ -349,9 +389,13 @@ li.menu-item {
   font-family: walkway_boldregular;
   text-align: center;
   margin-top: 1em; }
-  @media (min-width: 1025px) {
+  @media (min-width: 650px) {
     .tagline2 {
-      font-size: 2.3rem; } }
+      font-size: 1rem; } }
+  @media (min-width: 850px) {
+    .tagline2 {
+      font-size: 2rem;
+      margin-top: 0em; } }
 
 /* ------------------------------------------
   ==About
@@ -360,7 +404,7 @@ li.menu-item {
   position: relative;
   background-color: #333;
   height: 28em; }
-  @media (min-width: 1025px) {
+  @media (min-width: 850px) {
     #about {
       height: 35em; } }
   #about h3 {
@@ -370,7 +414,7 @@ li.menu-item {
     text-align: center;
     color: #fff;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
-    @media (min-width: 1025px) {
+    @media (min-width: 850px) {
       #about h3 {
         padding-top: 2em;
         text-align: left; } }
@@ -388,13 +432,13 @@ li.menu-item {
     font-family: 'Roboto', sans-serif;
     text-align: left;
     margin-top: 0.5em; }
-  @media (min-width: 961px) {
+  @media (min-width: 650px) {
     #about .about-text {
       text-align: left;
       width: 60%; }
     #about p {
-      font-size: 1rem; } }
-  @media (min-width: 1025px) {
+      font-size: 1.2rem; } }
+  @media (min-width: 850px) {
     #about h3 {
       font-family: walkway_boldregular, sans-serif;
       font-size: 2rem;
@@ -443,24 +487,25 @@ section {
       background-image: url(../img/mobile-doors.jpg);
       background-size: cover;
       background-position: center 100px; } }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     #building {
-      background-position: center 100px; } }
+      background-image: url(../img/home/home-test.jpg);
+      background-position: left; } }
 
 /* ------------------------------------------
   ==contact
 --------------------------------------------- */
-/* Img */
 .img--split {
   height: 28em;
   background-image: url(../img/mobile-windows.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top; }
-  @media (min-width: 961px) {
+  @media (min-width: 650px) {
     .img--split {
-      display: none; } }
-  @media (min-width: 1025px) {
+      height: 40em;
+      background-position: center; } }
+  @media (min-width: 1024px) {
     .img--split {
       display: none; } }
 
@@ -478,30 +523,38 @@ section#ContactUs {
     section#ContactUs {
       width: 100%;
       margin: 0 auto; } }
-  @media (min-width: 1025px) {
+  @media (min-width: 850px) {
     section#ContactUs {
       height: 35em; }
       section#ContactUs .img--right {
-        height: 35em;
-        width: 50%;
-        background-image: url(../img/FullSizeRender.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        float: right; }
-      section#ContactUs #contact-form {
-        width: 50%;
-        float: left; }
-      section#ContactUs h1 {
-        text-align: left;
-        margin-left: 2em;
-        font-size: 2rem;
-        padding: 0.5em 0 0.5em 0; } }
+        display: none; } }
+  @media (min-width: 1024px) {
+    section#ContactUs .img--right {
+      display: block;
+      height: 35em;
+      width: 50%;
+      background-image: url(../img/50/kitchen1.jpg);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      float: right; }
+    section#ContactUs #contact-form {
+      width: 50%;
+      float: left; }
+    section#ContactUs h1 {
+      text-align: left;
+      margin-left: 2em;
+      font-size: 2rem;
+      padding: 0.5em 0 0.5em 0; } }
 
 .formblock {
   text-align: center; }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     .formblock {
       text-align: left;
+      padding-left: 2em; } }
+  @media (min-width: 1350px) {
+    .formblock {
       padding-left: 6em; } }
 
 #contact .desc h2 {
@@ -530,7 +583,7 @@ section#ContactUs {
   font-family: Roboto, sans-serif;
   color: #eee;
   text-align: center; }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     #contact .formblock label {
       text-align: left; } }
 
@@ -565,7 +618,7 @@ section#ContactUs {
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     #contact .info {
       text-align: left;
       margin-left: 6em; } }
@@ -579,10 +632,9 @@ section#ContactUs {
 .button--containter {
   width: 100%;
   text-align: center; }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     .button--containter {
-      text-align: left;
-      margin-left: 4em; } }
+      text-align: left; } }
 
 #contact .subbutton {
   padding: 3px 7px;
@@ -599,7 +651,7 @@ section#ContactUs {
 p.alert {
   color: #9d3131;
   text-align: center; }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     p.alert {
       text-align: left;
       margin-left: 6em; } }
@@ -636,17 +688,18 @@ section.Enquiries {
     @media (min-width: 600px) {
       section.Enquiries .address {
         text-align: left; } }
-    @media (min-width: 1025px) {
-      section.Enquiries .address {
-        width: 50%;
-        float: right; }
-        section.Enquiries .address h5 {
-          padding-top: 5em; } }
-  @media (min-width: 1025px) {
+    @media (min-width: 850px) {
+      section.Enquiries .address h5 {
+        padding-top: 5em; } }
+  @media (min-width: 850px) {
+    section.Enquiries {
+      height: 33em; } }
+  @media (min-width: 1024px) {
     section.Enquiries .img--left {
+      display: block;
       height: 33em;
       width: 50%;
-      background-image: url(../img/FullSizeRender.jpg);
+      background-image: url(../img/50/entrance.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       float: left; } }

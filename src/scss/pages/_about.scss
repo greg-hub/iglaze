@@ -50,13 +50,13 @@
       margin-top: 0.5em;
 
     }
-    @include breakpoint ($tablet-landscape) {
+    @include breakpoint ($tablet) {
       .about-text {
         text-align: left;
         width: 60%;
       }
       p {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     } //tablet
     @include breakpoint ($desktop){

@@ -42,8 +42,9 @@ section {
   background-position:center 100px;
 
   } //tablet
-  @include breakpoint ($desktop){
-      background-position: center 100px;
+  @include breakpoint ($large-desktop){
+  background-image: url(../img/home/home-test.jpg);
+  background-position: left;
 
   } //desktop
 

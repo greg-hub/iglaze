@@ -11,7 +11,6 @@ section#home {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center top;
-    background-attachment: fixed bottom;
     background-color: #464646;
   }
 
@@ -21,61 +20,86 @@ section#home {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed bottom;
   }
 
     @include breakpoint ($tablet) {
-      background-image: url(../img/home/home-tab1.jpg);
-      background-position: center left ;
+      height: 80vh;
+      background-image: url(../img/home/home-test.jpg);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+
 
 
 
     }
 
 
-  // @include breakpoint ($tablet-portrait){
-  //   // height: 40em;
-  //   // min-height: 40em;
-  //
-  //
-  //  background-image: url(./img/mobile-home.jpg);
-  //   height: 30em;
-  //   // width: 100%;
-  // // background-size: 100% 100%;
-  //   background-size: contain;
-  //   background-attachment: fixed;
-  //   background-position: center 10px;
-  // } // tablet
+  @include breakpoint ($desktop) {
+    height: 90vh;
+    background-image: url(../img/home/home-test.jpg);
+    background-size: cover;
 
-  @include breakpoint ($desktop){
-    width: 100%;
-    height: 92vh;
-    background-image: url(../img/effect-windows.jpg);
-    background-size: 100%;
-    position: relative;
-    background-position: center 100px;
+    background-position: center bottom;
+    //background-attachment: fixed;
+  } //desktop
+
+  @include breakpoint ($large-desktop){
+    height: 100vh;
+
+    background-image: url(../img/home/home-doors.jpg);
+    background-size: cover;
+    //position: relative;
+    background-position: center bottom;
+    background-attachment: fixed;
+  } //desktop
+
+  @include breakpoint ($retina){
+    height: 90vh;
+    background-image: url(../img/home/home-doors.jpg);
+    background-size: cover;
+
+    //position: relative;
+    background-position: center;
     background-attachment: fixed;
   } //desktop
 } //home
 
+
+
 #slogan {
   //mobile
-  top: 20em;
+  top: 15em;
   position: relative;
   height: 5em;
-  background-color: rgba(0,0,0,.4);;
+  background-color: rgba(0,0,0,.4);
+    @include breakpoint ($tablet){
+      background-color: rgba(0,0,0,.4);
+      top: 25em;
+      height: 6em;
+
+  }
+
+  @include breakpoint ($desktop){
+    background-color: rgba(0,0,0,.4);
+    top: 25em;
+    height: 8em;
+
+  }
 }
 
 .tagline {
   color: #fff;
   font-size: 2rem;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-  0px 8px 1px rgba(0,0,0,0.1),
-  0px 1px 0px rgba(0,0,0,0.1);
+
   font-family: $primary-font;
   text-align: center;
+    @include breakpoint ($tablet){
+      font-size: 2.5rem;
+    }
   @include breakpoint ($desktop){
-    font-size: 3.5rem;
+    font-size: 3rem;
+      top: 20em;
   }
 }
 
@@ -88,7 +112,11 @@ section#home {
   font-family: $primary-font;
   text-align: center;
   margin-top: 1em;
+    @include breakpoint ($tablet){
+      font-size: 1rem;
+    }
   @include breakpoint ($desktop){
-    font-size: 2.3rem;
+    font-size: 2rem;
+      margin-top: 0em;
   }
 }

@@ -113,6 +113,13 @@ a:hover {
 /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
+.header--container {
+      @include breakpoint($mobile) {
+        height: 3em;
+      }
+  height: 8.5em;
+
+}
 
 header {
   background: #000;
@@ -122,6 +129,12 @@ header {
   left: 0;
   top: 30px;
   border-bottom: 1px solid rgba(160, 160, 159, 0.3);
+    @include breakpoint($desktop) {
+      height: 7em;
+    }
+    @include breakpoint($retina) {
+      height: 7em;
+    }
  }
 
 .logo {
