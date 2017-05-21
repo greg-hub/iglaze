@@ -102,6 +102,9 @@ a:hover {
     font-size: 1rem;
     color: #fff;
     font-family: walkway_boldregular;
+    @include breakpoint ($mobile-small){
+      font-size: 0.8rem;
+    }
   }
 
   @include breakpoint ($tablet-landscape) {}
@@ -114,6 +117,9 @@ a:hover {
   FIXED HEADER
 --------------------------------------------- */
 .header--container {
+  @include breakpoint($mobile-small) {
+    height: 3em;
+  }
       @include breakpoint($mobile) {
         height: 3em;
       }

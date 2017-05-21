@@ -4,6 +4,15 @@
 
 section#home {
   //mobile
+  @include breakpoint ($mobile-small) {
+    height: 70vh;
+    max-height: auto;
+    background-image: url(../img/mobile-home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-color: #464646;
+  };
   @include breakpoint ($mobile) {
     height: 70vh;
     max-height: auto;
@@ -69,20 +78,24 @@ section#home {
 
 #slogan {
   //mobile
-  top: 15em;
+  top: 14em;
   position: relative;
   height: 5em;
   background-color: rgba(0,0,0,.4);
+    @include breakpoint ($mobile-small) {
+      top: 12em;
+      height: 6em;
+    }
     @include breakpoint ($tablet){
       background-color: rgba(0,0,0,.4);
-      top: 25em;
+      top: 17em;
       height: 6em;
 
   }
 
   @include breakpoint ($desktop){
     background-color: rgba(0,0,0,.4);
-    top: 25em;
+    top: 18em;
     height: 8em;
 
   }
@@ -103,7 +116,10 @@ section#home {
   }
 }
 
-.tagline2{
+.tagline2 {
+  @include breakpoint ($mobile-small) {
+    font-size: 0.7rem;
+  }
   color: #fff;
   font-size: 0.8rem;
   text-shadow: 0px 6px 3px rgba(0,0,0,0.4),

@@ -43,10 +43,17 @@ section {
 
   } //tablet
   @include breakpoint ($large-desktop){
-  background-image: url(../img/home/home-test.jpg);
-  background-position: left;
+  background-image: url(../img/retina-bg.jpg);
+  background-position: center top;
+}//desktop
 
-  } //desktop
+  @include breakpoint ($retina){
+  background-image: url(../img/retina-bg.jpg);
+  background-position: center top;
+  background-size: cover;
+
+
+  }
 
 
 }

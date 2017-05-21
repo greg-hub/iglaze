@@ -110,6 +110,9 @@ a:hover {
     font-size: 1rem;
     color: #fff;
     font-family: walkway_boldregular; }
+    @media (max-width: 350px) {
+      .top--Header h4 {
+        font-size: 0.8rem; } }
   @media (min-width: 850px) {
     .top--Header {
       text-align: left; } }
@@ -119,7 +122,10 @@ a:hover {
 --------------------------------------------- */
 .header--container {
   height: 8.5em; }
-  @media (min-width: 300px) {
+  @media (max-width: 350px) {
+    .header--container {
+      height: 3em; } }
+  @media (min-width: 350px) {
     .header--container {
       height: 3em; } }
 
@@ -304,7 +310,17 @@ li.menu-item {
 /* ------------------------------------------
   ==Home
 --------------------------------------------- */
-@media (min-width: 300px) {
+@media (max-width: 350px) {
+  section#home {
+    height: 70vh;
+    max-height: auto;
+    background-image: url(../img/mobile-home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-color: #464646; } }
+
+@media (min-width: 350px) {
   section#home {
     height: 70vh;
     max-height: auto;
@@ -354,19 +370,23 @@ li.menu-item {
     background-attachment: fixed; } }
 
 #slogan {
-  top: 15em;
+  top: 14em;
   position: relative;
   height: 5em;
   background-color: rgba(0, 0, 0, 0.4); }
+  @media (max-width: 350px) {
+    #slogan {
+      top: 12em;
+      height: 6em; } }
   @media (min-width: 650px) {
     #slogan {
       background-color: rgba(0, 0, 0, 0.4);
-      top: 25em;
+      top: 17em;
       height: 6em; } }
   @media (min-width: 850px) {
     #slogan {
       background-color: rgba(0, 0, 0, 0.4);
-      top: 25em;
+      top: 18em;
       height: 8em; } }
 
 .tagline {
@@ -389,6 +409,9 @@ li.menu-item {
   font-family: walkway_boldregular;
   text-align: center;
   margin-top: 1em; }
+  @media (max-width: 350px) {
+    .tagline2 {
+      font-size: 0.7rem; } }
   @media (min-width: 650px) {
     .tagline2 {
       font-size: 1rem; } }
@@ -489,8 +512,13 @@ section {
       background-position: center 100px; } }
   @media (min-width: 1024px) {
     #building {
-      background-image: url(../img/home/home-test.jpg);
-      background-position: left; } }
+      background-image: url(../img/retina-bg.jpg);
+      background-position: center top; } }
+  @media (min-width: 1350px) {
+    #building {
+      background-image: url(../img/retina-bg.jpg);
+      background-position: center top;
+      background-size: cover; } }
 
 /* ------------------------------------------
   ==contact
@@ -593,6 +621,9 @@ section#ContactUs {
   font-family: Roboto, sans-serif;
   color: #666;
   width: 330px; }
+  @media (max-width: 350px) {
+    #contact .formblock .txt {
+      width: 290px; } }
 
 #contact .formblock .txtarea {
   font-size: 1.5em;
@@ -601,6 +632,9 @@ section#ContactUs {
   color: #666;
   width: 330px;
   height: 140px; }
+  @media (max-width: 350px) {
+    #contact .formblock .txtarea {
+      width: 290px; } }
 
 #contact .formblock .error {
   display: block;
@@ -647,14 +681,16 @@ section#ContactUs {
   @media (min-width: 961px) {
     #contact .subbutton {
       margin-left: 2em; } }
-
-p.alert {
-  color: #9d3131;
-  text-align: center; }
-  @media (min-width: 1024px) {
-    p.alert {
-      text-align: left;
-      margin-left: 6em; } }
+  @media (min-width: 1350px) {
+    #contact .subbutton {
+      margin-left: 5.5em; } }
+  #contact .subbutton p.alert {
+    color: #9d3131;
+    text-align: center; }
+    @media (min-width: 1024px) {
+      #contact .subbutton p.alert {
+        text-align: left;
+        margin-left: 6em; } }
 
 /* ------------------------------------------
   ==Enquiries
@@ -690,7 +726,7 @@ section.Enquiries {
         text-align: left; } }
     @media (min-width: 850px) {
       section.Enquiries .address h5 {
-        padding-top: 5em; } }
+        padding-top: 4em; } }
   @media (min-width: 850px) {
     section.Enquiries {
       height: 33em; } }

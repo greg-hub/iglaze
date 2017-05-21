@@ -128,12 +128,22 @@ section#ContactUs {
   font-family: Roboto, sans-serif;
   color: #666;
   width: 330px;
+  @include breakpoint ($mobile-small) {
+      width: 290px;
+  }
 }
 
 #contact .formblock .txtarea {
   font-size: 1.5em;
   font-family: Roboto, sans-serif;
-  padding: 3px 5px; color: #666; width: 330px; height: 140px; }
+  padding: 3px 5px;
+  color: #666;
+  width: 330px;
+  height: 140px;
+  @include breakpoint ($mobile-small) {
+    width: 290px;
+  }
+}
 
 #contact .formblock .error {
   display: block;
@@ -183,7 +193,10 @@ section#ContactUs {
   @include breakpoint($tablet-landscape) {
     margin-left: 2em;
   }
-}
+  @include breakpoint($retina){
+    margin-left: 5.5em;
+  }
+
 
 p.alert {
   color: #9d3131;
@@ -193,6 +206,7 @@ p.alert {
     margin-left: 6em;
 
   }
+ }
 }
 
 
@@ -239,7 +253,7 @@ section.Enquiries {
     } //tablet
     @include breakpoint($desktop) {
       h5{
-        padding-top: 5em;
+        padding-top: 4em;
       }
     } //desktop
   } //address

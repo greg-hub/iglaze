@@ -1,7 +1,7 @@
 //
 
-$mobile-small		:320px; //S4 mini, iPhone 5 & up
-$mobile     		: (min-width: 300px); //S4 mini, iPhone 5 & up
+$mobile-small: (min-width: 300px) and (max-width 350px); //S4 mini, iPhone 5 & up
+$mobile: (min-width: 350px); //S4 mini, iPhone 5 & up
 $mobile-landscape   :(min-width 501px) (max-width 750px) (orientation landscape);
 $tablet-portrait	:600px;	//portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
 $tablet-landscape	:961px;	//tablet, landscape iPad, lo-res laptops ands desktops
