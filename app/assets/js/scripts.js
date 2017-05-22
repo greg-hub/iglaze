@@ -29,12 +29,12 @@ $(document).ready(function() {
 			if(!hasError) {
 				var formInput = $(this).serialize();
 				$.post($(this).attr('action'),formInput, function(data){
-					$('form#contact-us').slideUp("fast", function() {				   
-						$(this).before('<p class="tick"><strong>Thanks!</strong> Your email has been delivered. Huzzah!</p>');
+					$('form#contact-us').slideUp("fast", function() {
+						$(this).before('<p class="tick">Thanks! Your email has been delivered. <br> We will get back to you as soon as possible </p>');
 					});
 				});
 			}
-			
-			return false;	
+
+			return false;
 		});
 	});

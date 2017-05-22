@@ -102,6 +102,9 @@ a:hover {
     font-size: 1rem;
     color: #fff;
     font-family: walkway_boldregular;
+    @include breakpoint ($tablet) {
+      font-size: 1.2rem;
+    }
     @include breakpoint ($mobile-small){
       font-size: 0.8rem;
     }

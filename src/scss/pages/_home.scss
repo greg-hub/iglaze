@@ -78,7 +78,7 @@ section#home {
 
 #slogan {
   //mobile
-  top: 14em;
+  top: 50%;
   position: relative;
   height: 5em;
   background-color: rgba(0,0,0,.4);
@@ -88,14 +88,14 @@ section#home {
     }
     @include breakpoint ($tablet){
       background-color: rgba(0,0,0,.4);
-      top: 17em;
+      top: 50%;
       height: 6em;
 
   }
 
   @include breakpoint ($desktop){
     background-color: rgba(0,0,0,.4);
-    top: 18em;
+    top: 50%;
     height: 8em;
 
   }

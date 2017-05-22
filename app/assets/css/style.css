@@ -110,6 +110,9 @@ a:hover {
     font-size: 1rem;
     color: #fff;
     font-family: walkway_boldregular; }
+    @media (min-width: 650px) {
+      .top--Header h4 {
+        font-size: 1.2rem; } }
     @media (max-width: 350px) {
       .top--Header h4 {
         font-size: 0.8rem; } }
@@ -370,7 +373,7 @@ li.menu-item {
     background-attachment: fixed; } }
 
 #slogan {
-  top: 14em;
+  top: 50%;
   position: relative;
   height: 5em;
   background-color: rgba(0, 0, 0, 0.4); }
@@ -381,12 +384,12 @@ li.menu-item {
   @media (min-width: 650px) {
     #slogan {
       background-color: rgba(0, 0, 0, 0.4);
-      top: 17em;
+      top: 50%;
       height: 6em; } }
   @media (min-width: 850px) {
     #slogan {
       background-color: rgba(0, 0, 0, 0.4);
-      top: 18em;
+      top: 50%;
       height: 8em; } }
 
 .tagline {
@@ -565,6 +568,7 @@ section#ContactUs {
       background-size: cover;
       background-position: 50% 50%;
       background-repeat: no-repeat;
+      background-position: center top;
       float: right; }
     section#ContactUs #contact-form {
       width: 50%;
@@ -659,9 +663,14 @@ section#ContactUs {
 
 #contact p.tick {
   font-family: Roboto, sans-serif;
-  font-style: italic;
   font-size: 1.2em;
-  color: #3e669c; }
+  color: #fff;
+  text-align: center;
+  padding-top: 4em;
+  margin-left: 2em; }
+  @media (min-width: 1024px) {
+    #contact p.tick {
+      margin-left: 2em; } }
 
 .button--containter {
   width: 100%;
@@ -738,6 +747,7 @@ section.Enquiries {
       background-image: url(../img/50/entrance.jpg);
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center bottom;
       float: left; } }
 
 footer {
