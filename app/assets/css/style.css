@@ -123,14 +123,6 @@ a:hover {
 /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
-@media (max-width: 350px) {
-  .header--container {
-    height: 2.5em; } }
-
-@media (min-width: 350px) {
-  .header--container {
-    height: 3.5em; } }
-
 @media (min-width: 650px) {
   .header--container {
     height: 5em; } }
@@ -145,7 +137,8 @@ header {
   z-index: 3;
   width: 100%;
   left: 0;
-  top: 30px; }
+  top: 30px;
+  height: 5.5em; }
   @media (min-width: 850px) {
     header {
       height: 7em; } }
@@ -394,7 +387,7 @@ li.menu-item {
   @media (min-width: 850px) {
     #slogan {
       background-color: rgba(0, 0, 0, 0.4);
-      top: 50%;
+      top: 40%;
       height: 8em; } }
 
 .tagline {

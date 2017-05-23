@@ -124,7 +124,7 @@ window.smoothScroll = (function (window, document, undefined) {
     var updateURL = overrides.updateURL || options.updateURL;
 
     // Selectors and variables
-    var headerHeight = 100;
+    var headerHeight = 118;
     var startLocation = window.pageYOffset; // Current location on the page
     var endLocation = _getEndLocation( document.querySelector(anchor), headerHeight ); // Scroll to location
     var animationInterval; // interval timer

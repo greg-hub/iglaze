@@ -120,12 +120,12 @@ a:hover {
   FIXED HEADER
 --------------------------------------------- */
 .header--container {
-  @include breakpoint($mobile-small) {
-    height: 2.5em;
-  }
-  @include breakpoint($mobile) {
-    height: 3.5em;
-  }
+  // @include breakpoint($mobile-small) {
+  //   height: 2.5em;
+  // }
+  // @include breakpoint($mobile) {
+  //   height: 2.5em;
+  // }
   @include breakpoint($tablet) {
       height: 5em;
   }
@@ -143,6 +143,7 @@ header {
   width: 100%;
   left: 0;
   top: 30px;
+  height: 5.5em;
   // border-bottom: 1px solid rgba(160, 160, 159, 0.3);
     @include breakpoint($desktop) {
       height: 7em;
