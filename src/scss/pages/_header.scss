@@ -65,7 +65,7 @@ a:hover {
   user-select: none;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .js .nav-collapse {
     position: relative;
   }
@@ -89,18 +89,18 @@ a:hover {
   position: fixed;
 
   z-index: 9999;
-  background-color: #000;
+  background-color: #fff;
   top: 0;
   border-bottom: 1px solid rgba(160, 160, 159, 0.3);
 
 
   h4 {
-    background-color: #000;
+    background-color: #fff;
     display: inline;
     width: 10%;
     padding: 6px;
     font-size: 1rem;
-    color: #fff;
+    color: #000;
     font-family: walkway_boldregular;
     @include breakpoint ($tablet) {
       font-size: 1.2rem;
@@ -121,23 +121,29 @@ a:hover {
 --------------------------------------------- */
 .header--container {
   @include breakpoint($mobile-small) {
-    height: 3em;
+    height: 2.5em;
   }
-      @include breakpoint($mobile) {
-        height: 3em;
-      }
-  height: 8.5em;
+  @include breakpoint($mobile) {
+    height: 3.5em;
+  }
+  @include breakpoint($tablet) {
+      height: 5em;
+  }
 
+
+      @include breakpoint ($desktop){
+        height: 6em;
+      }
 }
 
 header {
-  background: #000;
+  background: #fff;
   position: fixed;
   z-index: 3;
   width: 100%;
   left: 0;
   top: 30px;
-  border-bottom: 1px solid rgba(160, 160, 159, 0.3);
+  // border-bottom: 1px solid rgba(160, 160, 159, 0.3);
     @include breakpoint($desktop) {
       height: 7em;
     }
@@ -147,7 +153,7 @@ header {
  }
 
 .logo {
-  background: url(../img/logo-mobile.png);
+  background: url(../img/Logo-white.png);
   background-repeat: no-repeat;
   text-indent: -999px;
   width: 8em;
@@ -206,7 +212,7 @@ li.menu-item{
   opacity: 1;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .mask {
     display: none !important;
     opacity: 0 !important;
@@ -217,10 +223,10 @@ li.menu-item{
   }
 
   .logo {
-      background: url(../img/iglaze-small.png);
+      background: url(../img/Logo-white-small.png);
       background-repeat: no-repeat;
       line-height: 90px;
-      width: 13%;
+      width: 15%;
   }
 
   a.logo {
@@ -258,7 +264,7 @@ li.menu-item{
   float: left;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse {
     float: right;
     width: auto;
@@ -273,7 +279,7 @@ li.menu-item{
   letter-spacing: 1.5px;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse li {
     width: auto;
   }
@@ -281,11 +287,11 @@ li.menu-item{
 
 .nav-collapse a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  border-top: 1px solid white;
+  // border-top: 1px solid #000;
   text-decoration: none;
-  background: #000;
+  background: #fff;
   padding: 0.7em 1em;
-  color: #fff;
+  color: #000;
   width: 100%;
   float: left;
 }
@@ -296,7 +302,7 @@ li.menu-item{
 
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse a {
     padding: 2.2em 2.2em;
     text-align: center;
@@ -311,7 +317,7 @@ li.menu-item{
   padding-left: 2em;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse ul ul a {
     display: none;
   }
@@ -337,7 +343,7 @@ li.menu-item{
 }
 
 .nav-toggle:before {
-  color: #fff; /* Edit this to change the icon color */
+  color: #000; /* Edit this to change the icon color */
   font: normal 55px/55px "monospace"; /* Edit font-size (28px) to change the icon size */
   text-transform: none;
   text-align: center;
