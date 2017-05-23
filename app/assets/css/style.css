@@ -81,7 +81,7 @@ a:hover {
   -o-user-select: none;
   user-select: none; }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .js .nav-collapse {
     position: relative; }
   .js .nav-collapse.closed {
@@ -99,16 +99,16 @@ a:hover {
   width: 100%;
   position: fixed;
   z-index: 9999;
-  background-color: #000;
+  background-color: #fff;
   top: 0;
   border-bottom: 1px solid rgba(160, 160, 159, 0.3); }
   .top--Header h4 {
-    background-color: #000;
+    background-color: #fff;
     display: inline;
     width: 10%;
     padding: 6px;
     font-size: 1rem;
-    color: #fff;
+    color: #000;
     font-family: walkway_boldregular; }
     @media (min-width: 650px) {
       .top--Header h4 {
@@ -123,23 +123,29 @@ a:hover {
 /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
-.header--container {
-  height: 8.5em; }
-  @media (max-width: 350px) {
-    .header--container {
-      height: 3em; } }
-  @media (min-width: 350px) {
-    .header--container {
-      height: 3em; } }
+@media (max-width: 350px) {
+  .header--container {
+    height: 2.5em; } }
+
+@media (min-width: 350px) {
+  .header--container {
+    height: 3.5em; } }
+
+@media (min-width: 650px) {
+  .header--container {
+    height: 5em; } }
+
+@media (min-width: 850px) {
+  .header--container {
+    height: 6em; } }
 
 header {
-  background: #000;
+  background: #fff;
   position: fixed;
   z-index: 3;
   width: 100%;
   left: 0;
-  top: 30px;
-  border-bottom: 1px solid rgba(160, 160, 159, 0.3); }
+  top: 30px; }
   @media (min-width: 850px) {
     header {
       height: 7em; } }
@@ -148,7 +154,7 @@ header {
       height: 7em; } }
 
 .logo {
-  background: url(../img/logo-mobile.png);
+  background: url(../img/Logo-white.png);
   background-repeat: no-repeat;
   text-indent: -999px;
   width: 8em;
@@ -194,17 +200,17 @@ li.menu-item {
   visibility: visible;
   opacity: 1; }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .mask {
     display: none !important;
     opacity: 0 !important; }
   .logo-small {
     display: none; }
   .logo {
-    background: url(../img/iglaze-small.png);
+    background: url(../img/Logo-white-small.png);
     background-repeat: no-repeat;
     line-height: 90px;
-    width: 13%; }
+    width: 15%; }
   a.logo {
     margin-left: 2em;
     margin-top: 3px; } }
@@ -228,7 +234,7 @@ li.menu-item {
   width: 100%;
   float: left; }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse {
     float: right;
     width: auto; } }
@@ -240,17 +246,16 @@ li.menu-item {
   font-size: 1.1rem;
   letter-spacing: 1.5px; }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse li {
     width: auto; } }
 
 .nav-collapse a {
   -webkit-tap-highlight-color: transparent;
-  border-top: 1px solid white;
   text-decoration: none;
-  background: #000;
+  background: #fff;
   padding: 0.7em 1em;
-  color: #fff;
+  color: #000;
   width: 100%;
   float: left; }
 
@@ -258,7 +263,7 @@ li.menu-item {
 .nav-collapse .active a {
   border-bottom: solid 2px #376ab0; }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse a {
     padding: 2.2em 2.2em;
     text-align: center;
@@ -270,7 +275,7 @@ li.menu-item {
   background: #ca3716;
   padding-left: 2em; }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 850px) {
   .nav-collapse ul ul a {
     display: none; } }
 
@@ -289,7 +294,7 @@ li.menu-item {
   float: right; }
 
 .nav-toggle:before {
-  color: #fff;
+  color: #000;
   /* Edit this to change the icon color */
   font: normal 55px/55px "monospace";
   /* Edit font-size (28px) to change the icon size */
@@ -751,7 +756,7 @@ section.Enquiries {
       float: left; } }
 
 footer {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-align: center;
-  color: #fff;
-  background-color: black; }
+  color: #000;
+  background-color: #fff; }
