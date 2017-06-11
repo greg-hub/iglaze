@@ -15,7 +15,7 @@ section#home {
   };
   @include breakpoint ($mobile) {
     height: 70vh;
-    max-height: auto;  
+    max-height: auto;
     background-image: url(../img/mobile-home.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -67,8 +67,6 @@ section#home {
     height: 90vh;
     background-image: url(../img/home/home-doors.jpg);
     background-size: cover;
-
-    //position: relative;
     background-position: center;
     background-attachment: fixed;
   } //desktop
@@ -90,7 +88,6 @@ section#home {
       height: 4.6em;
       background-color: rgba(0,0,0,.4);
       top: 50%;
-      //height: 4em;
     }
     @include breakpoint ($desktop) {
     background-color: rgba(0,0,0,.4);
