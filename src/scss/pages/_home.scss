@@ -15,7 +15,7 @@ section#home {
   };
   @include breakpoint ($mobile) {
     height: 70vh;
-    max-height: auto;
+    max-height: auto;  
     background-image: url(../img/mobile-home.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -80,59 +80,75 @@ section#home {
   //mobile
   top: 50%;
   position: relative;
-  height: 5em;
+  height: 3.8em;
   background-color: rgba(0,0,0,.4);
     @include breakpoint ($mobile-small) {
       top: 12em;
-      height: 6em;
+      height: 5.3em;
     }
-    @include breakpoint ($tablet){
+    @include breakpoint ($tablet) {
+      height: 4.6em;
       background-color: rgba(0,0,0,.4);
       top: 50%;
-      height: 6em;
-
-  }
-
-  @include breakpoint ($desktop){
+      //height: 4em;
+    }
+    @include breakpoint ($desktop) {
     background-color: rgba(0,0,0,.4);
     top: 40%;
-    height: 8em;
+    height: 7.2em;
+    }
 
-  }
-}
-
-.tagline {
+  .tagline {
   color: #fff;
-  font-size: 2rem;
-
+  font-size: 1.1rem;
   font-family: $primary-font;
   text-align: center;
-    @include breakpoint ($tablet){
+  .mobile--break {
+    display: none;
+  }
+    @include breakpoint ($mobile-small) {
+      .mobile--break {
+        display: block;
+      }
+    }
+    @include breakpoint ($tablet) {
+    font-size: 1.8rem;
+      .mobile--break {
+        display: none;
+      }
+    }
+    @include breakpoint ($desktop) {
       font-size: 2.5rem;
-    }
-  @include breakpoint ($desktop){
-    font-size: 3rem;
       top: 20em;
-  }
-}
-
-.tagline2 {
-  @include breakpoint ($mobile-small) {
-    font-size: 0.7rem;
-  }
-  color: #fff;
-  font-size: 0.8rem;
-  text-shadow: 0px 6px 3px rgba(0,0,0,0.4),
-  0px 8px 1px rgba(0,0,0,0.1),
-  0px 6px 0px rgba(0,0,0,0.1);
-  font-family: $primary-font;
-  text-align: center;
-  margin-top: 1em;
-    @include breakpoint ($tablet){
-      font-size: 1rem;
+      .mobile--break {
+        display: none;
+      }
     }
-  @include breakpoint ($desktop){
-    font-size: 2rem;
-      margin-top: 0em;
+    @include breakpoint ($large-desktop) {
+      font-size: 2.8rem;
+      top: 20em;
+    }
+  }
+
+  .tagline2 {
+    @include breakpoint ($mobile-small) {
+    font-size: 0.7rem;
+    }
+    color: #fff;
+    font-size: 0.8rem;
+    text-shadow: 0px 6px 3px rgba(0,0,0,0.4),
+    0px 8px 1px rgba(0,0,0,0.1),
+    0px 6px 0px rgba(0,0,0,0.1);
+    font-family: $primary-font;
+    text-align: center;
+    margin-top: 0.7em;
+    @include breakpoint ($tablet) {
+      font-size: 1.2rem;
+      margin-top: 0.3em;
+    }
+    @include breakpoint ($desktop) {
+    font-size: 1.8rem;
+    margin-top: 0em;
+    }
   }
 }

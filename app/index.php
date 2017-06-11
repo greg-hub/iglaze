@@ -38,7 +38,7 @@ if(isset($_POST['submitted'])) {
 	// upon no failure errors let's email now!
 	if(!isset($hasError)) {
 
-		$emailTo = 'gregclinton1@gmail.com';
+		$emailTo = 'sales@iglaze.com';
 		$subject = 'Submitted message from '.$name;
 		$sendCopy = trim($_POST['sendCopy']);
 		$body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
@@ -96,8 +96,8 @@ if(isset($_POST['submitted'])) {
     <section id="home">
       <!-- <img class="retina"src="assets/img/home/home-retina.jpg" alt=""> -->
        <div id="slogan">
-          <h1 class="tagline">ALUMINIUM & UPVC</h1>
-          <h2 class="tagline2">DESIGN & MANUFACTURE - CONTRACT MANAGEMENT</h2>
+          <h1 class="tagline">ALUMINIUM & UPVC <br class="mobile--break"> WINDOWS & DOORS</h1>
+          <h2 class="tagline2">DESIGN – MANUFACTURE – CONTRACTING</h2>
        </div>
 
     </section>
