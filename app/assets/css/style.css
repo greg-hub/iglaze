@@ -760,6 +760,14 @@ section.Enquiries {
       background-position: center bottom;
       float: left; } }
 
+.pswp__caption__center {
+  text-align: center; }
+
+figure {
+  display: inline-block;
+  width: 25%;
+  float: left; }
+
 footer {
   font-size: 0.8rem;
   text-align: center;

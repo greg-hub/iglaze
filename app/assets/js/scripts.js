@@ -6,43 +6,37 @@
  * @version 1.0.0
  * Copyright 2017. MIT licensed.
  */
-//photoswipe-gallery
-var openPhotoSwipe = function() {
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-
-    // build items array
-    var items = [
-        {
-            src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
-            w: 964,
-            h: 1024
-        },
-        {
-            src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
-            w: 1024,
-            h: 683
-        }
-    ];
-
-    // define options (if needed)
-    var options = {
-			 // history & focus options are disabled on CodePen
-      	history: false,
-      	focus: false,
-
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0
-
-    };
-
-    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+/* global jQuery, PhotoSwipe, PhotoSwipeUI_Default, console */
+(function($){
+  // Init empty gallery array
+  var container = [];
+  // Loop over gallery items and push it to the array
+  $('#gallery').find('figure').each(function(){
+    var $link = $(this).find('a'),
+        item = {
+          src: $link.attr('href'),
+          w: $link.data('width'),
+          h: $link.data('height'),
+          title: $link.data('caption')
+        };
+    container.push(item);
+  });
+  // Define click event on gallery item
+  $('img').click(function(event){
+    // Prevent location change
+    event.preventDefault();
+    // Define object and gallery options
+    var $pswp = $('.pswp')[0],
+        options = {
+          index: $(this).parent('figure').index(),
+          bgOpacity: 0.85,
+          showHideOpacity: true
+        };
+    // Initialize PhotoSwipe
+    var gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, container, options);
     gallery.init();
-};
-
-// fucntion to load on page re-load
-// openPhotoSwipe();
-
-document.getElementById('btn').onclick = openPhotoSwipe;
+  });
+}(jQuery));
 
 // contact form
 $(document).ready(function() {
