@@ -499,7 +499,6 @@ body {
 section {
   height: 600px;
   width: 100%;
-  position: relative;
   box-sizing: border-box; }
 
 /* ------------------------------------------
@@ -556,10 +555,40 @@ section#ContactUs {
   section#ContactUs h1 {
     color: #fff;
     font-size: 2.5rem;
-    text-align: center;
+    text-align: left;
     text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4), 0px 4px 1px transparent, 0px 3px 0px rgba(0, 0, 0, 0.1);
     font-family: walkway_boldregular, sans-serif;
     padding-top: 0.5em; }
+  section#ContactUs .address {
+    width: 100%;
+    text-align: center; }
+    section#ContactUs .address h5 {
+      color: #376ab0;
+      font-size: 2rem;
+      font-family: walkway_boldregular, sans-serif;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
+      padding-top: 1em;
+      text-align: left; }
+    section#ContactUs .address p {
+      padding-top: 0.5em;
+      text-align: left;
+      color: white;
+      line-height: 1.5em;
+      font-size: 1.3rem;
+      font-family: Roboto, sans-serif; }
+    section#ContactUs .address span {
+      color: #376ab0;
+      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
+      font-family: sans-serif; }
+    @media (min-width: 600px) {
+      section#ContactUs .address {
+        text-align: left; } }
+    @media (min-width: 850px) {
+      section#ContactUs .address h5 {
+        padding-top: 4em; } }
+  @media (min-width: 850px) {
+    section#ContactUs {
+      height: 33em; } }
   @media (min-width: 961px) {
     section#ContactUs {
       width: 100%;
@@ -588,128 +617,6 @@ section#ContactUs {
       margin-left: 2em;
       font-size: 2rem;
       padding: 0.5em 0 0.5em 0; } }
-
-.formblock {
-  text-align: center; }
-  @media (min-width: 1024px) {
-    .formblock {
-      text-align: left;
-      padding-left: 2em; } }
-  @media (min-width: 1350px) {
-    .formblock {
-      padding-left: 6em; } }
-
-#contact .desc h2 {
-  font-weight: normal;
-  letter-spacing: -0.03em;
-  color: #444;
-  font-size: 2.4em;
-  margin-bottom: 8px; }
-
-#contact .desc p {
-  font-family: Roboto, sans-serif;
-  font-size: 1.2em;
-  color: #333;
-  line-height: 1.3em;
-  margin-bottom: 15px; }
-
-#contact .formblock {
-  display: block;
-  margin-bottom: 11px; }
-
-#contact .formblock label {
-  font-size: 1.1em;
-  display: block;
-  font-style: italic;
-  font-weight: normal;
-  font-family: Roboto, sans-serif;
-  color: #eee;
-  text-align: center; }
-  @media (min-width: 1024px) {
-    #contact .formblock label {
-      text-align: left; } }
-
-#contact .formblock .txt {
-  padding: 4px 6px;
-  font-size: 1.6em;
-  font-family: Roboto, sans-serif;
-  color: #666;
-  width: 330px; }
-  @media (max-width: 350px) {
-    #contact .formblock .txt {
-      width: 290px; } }
-
-#contact .formblock .txtarea {
-  font-size: 1.5em;
-  font-family: Roboto, sans-serif;
-  padding: 3px 5px;
-  color: #666;
-  width: 330px;
-  height: 140px; }
-  @media (max-width: 350px) {
-    #contact .formblock .txtarea {
-      width: 290px; } }
-
-#contact .formblock .error {
-  display: block;
-  font-weight: bold;
-  font-size: 1.2em;
-  font-style: normal;
-  font-family: Roboto, sans-serif;
-  color: #9d3131; }
-
-#contact .info {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #eee;
-  margin-bottom: 10px;
-  font-family: Roboto, sans-serif;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.1); }
-  @media (min-width: 1024px) {
-    #contact .info {
-      text-align: left;
-      margin-left: 6em; } }
-
-#contact p.tick {
-  font-family: Roboto, sans-serif;
-  font-size: 1.2em;
-  color: #fff;
-  text-align: center;
-  padding-top: 4em;
-  margin-left: 2em; }
-  @media (min-width: 1024px) {
-    #contact p.tick {
-      margin-left: 2em; } }
-
-.button--containter {
-  width: 100%;
-  text-align: center; }
-  @media (min-width: 1024px) {
-    .button--containter {
-      text-align: left; } }
-
-#contact .subbutton {
-  padding: 3px 7px;
-  font-size: 1.1em;
-  font-weight: bold;
-  font-family: Roboto, sans-serif;
-  color: #eee;
-  background-color: #376ab0;
-  text-align: center; }
-  @media (min-width: 961px) {
-    #contact .subbutton {
-      margin-left: 2em; } }
-  @media (min-width: 1350px) {
-    #contact .subbutton {
-      margin-left: 5.5em; } }
-  #contact .subbutton p.alert {
-    color: #9d3131;
-    text-align: center; }
-    @media (min-width: 1024px) {
-      #contact .subbutton p.alert {
-        text-align: left;
-        margin-left: 6em; } }
 
 /* ------------------------------------------
   ==Enquiries
