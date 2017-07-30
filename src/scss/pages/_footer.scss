@@ -1,15 +1,33 @@
 .footer {
-  padding: 3em 0 1em 0;
-  h6 {
-    font-size: 0.7rem;
-    font-family: Roboto, sans-serif;
-    text-align: center;
-    color: #fff;
-    padding-top: 2em;
-  }
   background-color: #333;
+  padding: 2em 0 1em 0;
+
+  &__row {
+    @include breakpoint($mobile) {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex  ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    @include breakpoint($tablet) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+  }
   &__contact {
-    width: 50%;
+    @include breakpoint($mobile) {
+      margin: 0 auto;
+    }
+    @include breakpoint($tablet) {
+      margin: unset;
+    }
+
     p {
       padding-top: 0.5em;
       text-align: left;
@@ -28,7 +46,35 @@
     }
   }
   &__links {
-    width: 50%;
+    @include breakpoint($mobile) {
+      padding-top: 2em;
+    }
+    @include breakpoint($tablet) {
+      padding-top: 0;
+    }
 
+    ul {
+      color: #fff;
+      list-style: none;
+    }
+    li {
+      padding-top: 1.2em;
+    }
+    li a {
+      color: #fff;
+      text-decoration: none;
+
+    }
+    li a:hover {
+      color: #376ab0;
+      text-decoration: underline;
+    }
+  }
+  &__copyright {
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    color: #fff;
+    padding: 2em 0 1em 0;
   }
 }

@@ -759,7 +759,7 @@ section#Enquiries {
 
 #gallery-img {
   background-color: #fff;
-  padding: 3em; }
+  padding: 2em; }
   #gallery-img h1 {
     color: #376ab0;
     font-size: 3.5rem;
@@ -783,27 +783,60 @@ section#Enquiries {
     margin: 1px; } }
 
 .footer {
-  padding: 3em 0 1em 0;
-  background-color: #333; }
-  .footer h6 {
-    font-size: 0.7rem;
+  background-color: #333;
+  padding: 2em 0 1em 0; }
+  @media (min-width: 350px) {
+    .footer__row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center; } }
+  @media (min-width: 650px) {
+    .footer__row {
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  @media (min-width: 350px) {
+    .footer__contact {
+      margin: 0 auto; } }
+  @media (min-width: 650px) {
+    .footer__contact {
+      margin: unset; } }
+  .footer__contact p {
+    padding-top: 0.5em;
+    text-align: left;
+    color: #fff;
+    line-height: 1.5em;
+    font-size: 1rem;
+    font-family: Roboto, sans-serif; }
+  .footer__contact span {
+    color: #376ab0;
+    font-size: 1rem;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
+    font-family: Roboto, sans-serif; }
+  @media (min-width: 350px) {
+    .footer__links {
+      padding-top: 2em; } }
+  @media (min-width: 650px) {
+    .footer__links {
+      padding-top: 0; } }
+  .footer__links ul {
+    color: #fff;
+    list-style: none; }
+  .footer__links li {
+    padding-top: 1.2em; }
+  .footer__links li a {
+    color: #fff;
+    text-decoration: none; }
+  .footer__links li a:hover {
+    color: #376ab0;
+    text-decoration: underline; }
+  .footer__copyright {
+    font-size: 1rem;
     font-family: Roboto, sans-serif;
     text-align: center;
     color: #fff;
-    padding-top: 2em; }
-  .footer__contact {
-    width: 50%; }
-    .footer__contact p {
-      padding-top: 0.5em;
-      text-align: left;
-      color: #fff;
-      line-height: 1.5em;
-      font-size: 1rem;
-      font-family: Roboto, sans-serif; }
-    .footer__contact span {
-      color: #376ab0;
-      font-size: 1rem;
-      text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 4px 1px rgba(0, 0, 0, 0.1), 0px 3px 0px rgba(0, 0, 0, 0.1);
-      font-family: Roboto, sans-serif; }
-  .footer__links {
-    width: 50%; }
+    padding: 2em 0 1em 0; }

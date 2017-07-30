@@ -258,8 +258,6 @@ section#Enquiries {
       text-align: left;
     } //tablet
     @include breakpoint($desktop) {
-      //width: 50%;
-      // float: right;
       h5{
         padding-top: 4em;
       }
