@@ -223,9 +223,7 @@ p.alert {
 section#Enquiries {
   background-color: #333;
   height: 22em;
-  float: right;
-  position: inherit;
-  .address{
+  .address {
     width: 100%;
     text-align: center;
     h5 {
@@ -243,17 +241,18 @@ section#Enquiries {
     p {
       padding-top: 0.5em;
       text-align: center;
-      color: white;
+      color: #fff;
       line-height: 1.5em;
       font-size: 1.3rem;
       font-family: Roboto, sans-serif;
     }
     span {
       color: #376ab0;
+      font-size: 1.3rem;
       text-shadow: 0px 0px 1px rgba(0,0,0,0.4),
       0px 4px 1px rgba(0,0,0,0.1),
       0px 3px 0px rgba(0,0,0,0.1);
-      font-family: sans-serif;
+      font-family: Roboto, sans-serif;
     }
     @include breakpoint($tablet-portrait) {
       text-align: left;

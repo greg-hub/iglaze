@@ -17,8 +17,8 @@
 		<!-- PhotoSwipe -->
 		<link rel="stylesheet" href="assets/photoswipe/dist/photoswipe.css">
 		<link rel="stylesheet" href="assets/photoswipe/dist/default-skin/default-skin.css">
-		<script src="assets/photoswipe/dist/photoswipe.min.js"></script>
-		<script src="assets/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+		<!-- <script src="assets/photoswipe/dist/photoswipe.min.js"></script> -->
+		<!-- <script src="assets/photoswipe/dist/photoswipe-ui-default.min.js"></script> -->
 	</head>
   <body>
   <div class="header--container">
@@ -30,10 +30,10 @@
       <a href="#home" class="logo" data-scroll>iglaze</a>
       <nav class="nav-collapse">
         <ul>
-          <li class="menu-item active"><a href="#home" data-scroll>Home</a></li>
+          <li class="menu-item"><a href="#home" data-scroll>Home</a></li>
           <li class="menu-item"><a href="#about" data-scroll>About</a></li>
           <li class="menu-item"><a href="#Enquiries" data-scroll>Contact</a></li>
-					<li class="menu-item"><a href="#img__gallery" data-scroll>Gallery</a></li>
+					<li class="menu-item"><a href="#gallery-img" data-scroll>Gallery</a></li>
         </ul>
       </nav>
     </header>
@@ -71,44 +71,47 @@
 
   <section id="Enquiries">
     <div class="img--left"></div>
-    <div class="map-responsive">
-      <!-- <img class="maps" src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyA2UQJQhB7JgNi2-0qpABb_JCN_tOMLQ48&center=51.26796476979914,1.2195134499999085&zoom=16&format=png&maptype=roadmap&size=640x640" alt=""> -->
-    </div>
     <div class="address">
+    <div class="details">
      <h5>Contact</h5>
-     <p>Wingham Works Unit 1 <br> Goodnestone Road <br> Wingham Kent CT3 1AR</p>
      <p><span>Tel:</span> 01227 722302</p>
      <p><span>Mob:</span> 07983 048078</p>
      <p><span>Email:</span> sales@iglaze.com</p>
+     <p>Wingham Works Unit 1 <br> Goodnestone Road <br> Wingham Kent CT3 1AR</p>
+      </div>
     </div>
-	</section>
+  </section>
+
 <!-- Gallery -->
-<section id="img__gallery">
+<div id="gallery-img">
+  <h1>Gallery</h1>
 <!-- Galley wrapper that contains all items -->
   <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
   <!-- Use figure for a more semantic html -->
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="flex-grid">
+      <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
       <a href="assets/img/gallery/01.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <!-- Thumbnail -->
         <img src="assets/img/gallery/01--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/09.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/09--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/03.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/03--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/11.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/11--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
+  </div> <!--flex-grid --->
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/05.jpg" data-width="600" data-height="900" itemprop="contentUrl"></a>
     </figure>
@@ -121,46 +124,50 @@
     <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/08.jpg" data-width="600" data-height="900" itemprop="contentUrl"></a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="flex-grid">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/02.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/02--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/04.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/04--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/10.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/10--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
     </figure>
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
       <a href="assets/img/gallery/16.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
         <img src="assets/img/gallery/16--s.jpg" itemprop="thumbnail" alt="Image description">
       </a>
-    </figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    </figure> <!--flex-grid -->
+    </div>
+    <div class="flex-grid">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/13.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 				<img src="assets/img/gallery/13--s.jpg" itemprop="thumbnail" alt="Image description">
 			</a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/14.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 			  <img src="assets/img/gallery/14--s.jpg" itemprop="thumbnail" alt="Image description">
 			</a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/24.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 				<img src="assets/img/gallery/24--s.jpg" itemprop="thumbnail" alt="Image description">
 			</a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/12.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 	    	<img src="assets/img/gallery/12--s.jpg" itemprop="thumbnail" alt="Image description">
 			</a>
 	  </figure>
+  </div> <!-- flex-grid -->
 		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/17.jpg" data-width="600" data-height="900" itemprop="contentUrl"></a>
 		</figure>
@@ -173,29 +180,28 @@
 		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/20.jpg" data-width="600" data-height="900" itemprop="contentUrl"></a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="flex-grid">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/21.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 			  <img src="assets/img/gallery/21--s.jpg" itemprop="thumbnail" alt="Image description"></a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/22.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 				<img src="assets/img/gallery/22--s.jpg" itemprop="thumbnail" alt="Image description"></a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/23.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 				<img src="assets/img/gallery/23--s.jpg" itemprop="thumbnail" alt="Image description">
 					</a>
 		</figure>
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		<figure class="col" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="assets/img/gallery/15.jpg" data-width="1200" data-height="900" itemprop="contentUrl">
 				<img src="assets/img/gallery/15--s.jpg" itemprop="thumbnail" alt="Image description">
   		</a>
 		</figure>
+  </div> <!--flex-grid --->
   </div> <!--#gallery -->
-
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
+</div>
   <!-- Root element of PhotoSwipe. Must have class pswp. -->
   <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <!-- Background of PhotoSwipe.
@@ -243,26 +249,38 @@
           </div>
       </div>
   </div>
-</section>
+  <div class="footer">
+    <div class="footer__row">
+    <div class="footer__contact">
+     <p><span>Tel:</span> 01227 722302</p>
+     <p><span>Mob:</span> 07983 048078</p>
+     <p><span>Email:</span> sales@iglaze.com</p>
+     <p>Wingham Works Unit 1 <br> Goodnestone Road <br> Wingham Kent CT3 1AR</p>
+    </div>
 
-<footer>
-<h4>&copy; 2017 iGlaze All Rights Reserved</h4>
-</footer>
+    <div class="footer__links">
+      <ul>
+        <li class="menu-item footer__nav"><a href="#home" data-scroll>Home</a></li>
+        <li class="menu-item footer__nav"><a href="#about" data-scroll>About</a></li>
+        <li class="menu-item footer__nav"><a href="#Enquiries" data-scroll>Contact</a></li>
+        <li class="menu-item footer__nav"><a href="#gallery-img" data-scroll>Gallery</a></li>
+      </ul>
+    </div>
 
+  </div>
+      <div class="footer__copyright"><h6>&copy; 2017 iGlaze All Rights Reserved</h6></div>
+      </div>
 
-  <!-- <footer class="clearfix">
-    	<h6>&copy;2017 iGlaze All rights reserved.</h6>
-  </footer> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
-    <script src="assets/js/fastclick.js"></script>
-    <script src="assets/js/scroll.js"></script>
-    <script src="assets/js/fixed-responsive-nav.js"></script>
-    <script src="assets/components/modernizr/modernizr.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="assets/js/contacts.js"></script>
-    <script src="assets/js/scripts.min.js"></script>
-    </script>
+<!--Script tags -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/scroll.js"></script>
+<script src="assets/js/fixed-responsive-nav.js"></script>
+<script src="assets/components/modernizr/modernizr.js"></script>
+<script src="assets/js/scripts.min.js"></script>
+</script>
 
     <!-- Google Analytics -->
   </body>
