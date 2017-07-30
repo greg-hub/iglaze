@@ -14,7 +14,7 @@
     container.push(item);
   });
   // Define click event on gallery item
-  $('img').click(function(event){
+  $('figure').click(function(event){
     // Prevent location change
     event.preventDefault();
     // Define object and gallery options
