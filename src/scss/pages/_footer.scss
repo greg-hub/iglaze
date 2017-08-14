@@ -2,6 +2,15 @@
   background-color: #333;
   padding: 2em 0 1em 0;
 
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #376ab0;
+    text-decoration: underline;
+  }
+
   &__row {
     @include breakpoint($mobile) {
       display: -webkit-box;
